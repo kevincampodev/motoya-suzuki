@@ -1837,6 +1837,10 @@ async function cargarHorariosDisponibles(){
 
         console.log(e);
 
+        horaSelect.innerHTML="<option value=''>Error cargando horarios. Intenta de nuevo.</option>";
+
+        return;
+
     }
 
     horaSelect.innerHTML="<option value=''>Seleccione una hora</option>";
