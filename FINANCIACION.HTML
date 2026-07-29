@@ -848,44 +848,83 @@ nav {
 
 <section class="fin-form">
 <h2 class="title">Solicita tu Estudio de Crédito</h2>
-<form>
-<input type="text" placeholder="Nombre completo">
-<input type="tel" placeholder="Teléfono">
-<input type="email" placeholder="Correo electrónico">
-<select>
-<option>Moto de interés</option>
-<option>V-STROM 160</option>
-<option>GN125 ABS</option>
-<option>GIXXER 150 FI ABS</option>
-<option>GIXXER 250</option>
-<option>GN 160</option>
-<option>VIVA FI ABS</option>
-<option>VSTROM 250 SX</option>
-<option>DR 150 ABS</option>
-<option>DR 160 X</option>
-<option>AX4</option>
-<option>BURGMAN 150</option>
-<option>BURGMAN 125</option>
-<option>ADDRESS</option>
-<option>AVENIS</option>
-<option>GSX-S 150</option>
-<option>GSX-R 150</option>
-</select>
-<select>
-<option>Entidad financiera</option>
-<option>ADDI</option>
-<option>SUFI</option>
-<option>Sistecrédito</option>
-<option>BRILLA</option>
-<option>BANCO DE BOGOTA</option>
-<option>MI PLANTE</option>
-<option>PROGRESER</option>
-<option>CREDIORBE</option>
+<form id="formCredito">
 
-</select>
-<button type="submit">Enviar Solicitud</button>
+    <input type="text" id="nombre" placeholder="Nombre completo" required>
+    <input type="text" id="apellidos" placeholder="Apellidos" required>
+    <input type="text" id="cedula" placeholder="Numero de cedula" required>
+    <input type="tel" id="telefono" placeholder="Telefono (10 digitos)" pattern="[0-9]{10}" maxlength="10" title="Ingresa un numero de celular valido de 10 digitos" required>
+    <input type="email" id="correo" placeholder="Correo electronico" required>
+    <input type="text" id="ciudad" placeholder="Ciudad" required>
+
+    <select id="moto" required>
+        <option value="">Moto de interes</option>
+        <option>V-STROM 160</option>
+        <option>GN125 ABS</option>
+        <option>GIXXER 150 FI ABS</option>
+        <option>GIXXER 250</option>
+        <option>GN 160</option>
+        <option>VIVA FI ABS</option>
+        <option>VSTROM 250 SX</option>
+        <option>DR 150 ABS</option>
+        <option>DR 160 X</option>
+        <option>AX4</option>
+        <option>BURGMAN 150</option>
+        <option>BURGMAN 125</option>
+        <option>ADDRESS</option>
+        <option>AVENIS</option>
+        <option>GSX-S 150</option>
+        <option>GSX-R 150</option>
+    </select>
+
+    <select id="entidad" required>
+        <option value="">Entidad financiera de preferencia</option>
+        <option>ADDI</option>
+        <option>SUFI</option>
+        <option>Sistecredito</option>
+        <option>BRILLA</option>
+        <option>BANCO DE BOGOTA</option>
+        <option>MI PLANTE</option>
+        <option>PROGRESER</option>
+        <option>CREDIORBE</option>
+    </select>
+
+    <select id="cuotaInicial" required>
+        <option value="">Cuota inicial disponible</option>
+        <option>Menos de $500.000</option>
+        <option>$500.000 - $1.000.000</option>
+        <option>$1.000.000 - $2.000.000</option>
+        <option>Mas de $2.000.000</option>
+    </select>
+
+    <select id="ingresos" required>
+        <option value="">Ingresos mensuales</option>
+        <option>Menos de $1.500.000</option>
+        <option>$1.500.000 - $3.000.000</option>
+        <option>$3.000.000 - $5.000.000</option>
+        <option>Mas de $5.000.000</option>
+    </select>
+
+    <select id="tipoEmpleo" required>
+        <option value="">Tipo de empleo</option>
+        <option>Empleado</option>
+        <option>Independiente</option>
+        <option>Pensionado</option>
+    </select>
+
+    <select id="tieneMoto" required>
+        <option value="">Tienes moto actualmente?</option>
+        <option>Si</option>
+        <option>No</option>
+    </select>
+
+    <textarea id="observaciones" placeholder="Algo mas que quieras contarnos?"></textarea>
+
+    <button type="submit" id="btnCredito">Enviar Solicitud</button>
+
+    <p id="mensajeCredito" style="text-align:center;margin-top:10px;"></p>
+
 </form>
-<p style="margin-top:15px;text-align:center"></p>
 </section>
 
 <footer class="premium-footer">
@@ -999,5 +1038,74 @@ window.addEventListener('scroll',()=>{
  if(hero) hero.style.backgroundPositionY=(window.scrollY*0.3)+'px';
 });
 </script>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+const URL_CREDITO = "https://script.google.com/macros/s/AKfycbwAB0WXex26QIA0NDxVEtOslis7kAPpvNSpxRwMXUpm5MJ8xfXYQv13Z13h7m55KJ0N/exec";
+
+document.getElementById("formCredito").addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const boton = document.getElementById("btnCredito");
+    boton.disabled = true;
+    boton.textContent = "Enviando...";
+
+    const datos = {
+        tipo: "credito",
+        nombre: document.getElementById("nombre").value,
+        apellidos: document.getElementById("apellidos").value,
+        cedula: document.getElementById("cedula").value,
+        telefono: document.getElementById("telefono").value,
+        correo: document.getElementById("correo").value,
+        ciudad: document.getElementById("ciudad").value,
+        moto: document.getElementById("moto").value,
+        entidad: document.getElementById("entidad").value,
+        cuotaInicial: document.getElementById("cuotaInicial").value,
+        ingresos: document.getElementById("ingresos").value,
+        tipoEmpleo: document.getElementById("tipoEmpleo").value,
+        tieneMoto: document.getElementById("tieneMoto").value,
+        observaciones: document.getElementById("observaciones").value
+    };
+
+    try {
+        const respuesta = await fetch(URL_CREDITO, {
+            method: "POST",
+            headers: {
+                "Content-Type": "text/plain;charset=utf-8"
+            },
+            body: JSON.stringify(datos)
+        });
+
+        const resultado = await respuesta.json();
+
+        if (resultado.resultado === true) {
+            Swal.fire({
+                icon: "success",
+                title: "Solicitud enviada",
+                text: "Un asesor se pondra en contacto contigo pronto."
+            });
+            this.reset();
+        } else {
+            Swal.fire({
+                icon: "error",
+                title: "Error",
+                text: resultado.mensaje || "No fue posible enviar la solicitud. Intentalo de nuevo."
+            });
+        }
+
+    } catch(error) {
+        Swal.fire({
+            icon: "error",
+            title: "Error",
+            text: "No fue posible enviar la solicitud. Verifica tu conexion e intentalo de nuevo."
+        });
+    }
+
+    boton.disabled = false;
+    boton.textContent = "Enviar Solicitud";
+});
+</script>
+
 </body>
 </html>
