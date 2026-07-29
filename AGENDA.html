@@ -1550,6 +1550,15 @@ img{
 
                 <textarea id="observaciones" placeholder="Describe cualquier novedad o inconveniente"></textarea>
 
+                <input type="text" id="website" name="website" style="display:none" tabindex="-1" autocomplete="off">
+
+                <div style="margin-top:10px;">
+                    <input type="checkbox" id="tratamientoCita" required>
+                    <label for="tratamientoCita" style="font-size:13px;cursor:pointer;">
+                        Acepto el <a href="politica-privacidad.html" target="_blank" style="color:#E8261B;">tratamiento de mis datos personales</a> conforme a la Ley 1581 de 2012.
+                    </label>
+                </div>
+
                 <button type="submit">
                     AGENDAR CITA
                 </button>
@@ -1942,6 +1951,8 @@ function convertirMinutos(hora){
 document.getElementById("formCita").addEventListener("submit",async function(e){
 
     e.preventDefault();
+
+    if (document.getElementById("website").value !== "") return;
 
     const boton=this.querySelector("button");
 
