@@ -1,0 +1,2028 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="IMG/MOTOYAA.png" style="height: 50px; width: 50px;">
+<i class="fa-solid fa-screwdriver-wrench"></i>
+<i class="fa-solid fa-motorcycle"></i>
+<i class="fa-solid fa-shield-halved"></i>
+<i class="fa-solid fa-gears"></i>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<title>SUZUKI | MOTOYA</title>
+
+<style>
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        background: white;
+        color: white;
+        margin: 0;
+    }
+
+    header {
+        background: #e60012;
+        padding: 20px;
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        letter-spacing: 2px;
+    }
+
+    .container {
+        max-width: 600px;
+        margin: 40px auto;
+        background: #2c2c32;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 0 20px rgb(16, 7, 178);
+    }
+
+    h2 {
+        text-align: center;
+        color: white;
+    }
+
+    input, select, textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 6px;
+        border: none;
+        background: #ffffff;
+        color: rgb(8, 8, 8);
+    }
+
+    button {
+        width: 100%;
+        padding: 15px;
+        margin-top: 20px;
+        background: #000000;
+        border: none;
+        color: white;
+        font-size: 16px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #ff1a2d;
+    }
+
+    .success {
+        text-align: center;
+        margin-top: 15px;
+        color: #00ff99;
+    }
+
+.logos {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo{
+    width: 330px;
+    height: 130px;
+    margin: 0;
+
+}
+
+.logo1 {
+    width: 250px;
+    height: 150px;
+    margin: 0;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 15px 30px;
+    height: 130px;
+}
+
+/* MENU */
+.menu {
+
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin-right: 40px; 
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #111;
+    font-weight: 500;
+}
+
+/* SUBMENU */
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;              /* 👈 alineado al inicio del botón */
+    
+    background: #111;
+    min-width: 200px;
+    border-radius: 8px;
+    padding: 10px 0;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: 0.3s;
+}
+
+/* ITEMS */
+.submenu li {
+    padding: 12px 20px;
+}
+
+.submenu li a {
+    color: white;
+}
+
+/* HOVER */
+.dropdown:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* EFECTO */
+.submenu li:hover {
+    background: #e60012;
+}
+
+
+.BANNER15{
+    background-image: url("IMG/BANNERGIX.jpg");
+    height: 105vh;
+    display: flex;
+    align-items: center;
+    padding: 60px;
+    background-size: cover;        /* Ajusta toda la pantalla */
+    background-position: center;   /* Centra la imagen */
+    background-repeat: no-repeat;  /* Evita que se repita */
+}
+
+
+.cta {
+    background: #000fe6;
+    padding: 60px;
+    text-align: center;
+}
+
+.cta button {
+    background: black;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+    background: black;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ===== FIX DROPDOWN MOTO YA ===== */
+
+.dropdown {
+    position: relative;
+}
+
+.promo-section{
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .promo-card{
+        height: 220px;
+    }
+
+
+    .promo-section{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+    padding: 40px;
+
+    background: #f5f5f5;
+}
+
+/* CARD */
+.promo-card{
+    position: relative;
+
+    height: 250px;
+
+    border-radius: 20px;
+    overflow: hidden;
+
+    background: white;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+
+    transition: 0.3s;
+}
+
+/* IMAGEN */
+.promo-card img{
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain; /* 👈 IMPORTANTE */
+
+    background: #fff;
+
+    transition: 0.4s;
+
+    padding: 10px;
+}
+
+/* EFECTO OSCURO */
+.promo-card::after{
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.05)
+    );
+}
+
+/* TEXTO */
+.promo-overlay{
+    position: absolute;
+
+    bottom: 15px;
+    left: 15px;
+
+    z-index: 2;
+
+    color: white;
+}
+
+/* TITULO */
+.promo-overlay h3{
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* SUBTEXTO */
+.promo-overlay p{
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* HOVER */
+.promo-card:hover{
+    transform: translateY(-6px);
+}
+
+.promo-card:hover img{
+    transform: scale(1.03);
+}
+
+/* TABLET */
+@media (max-width: 1100px){
+
+    .promo-section{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}
+
+/* CELULAR */
+@media (max-width: 768px){
+
+    .promo-section{
+        grid-template-columns: 1fr;
+    }
+
+}
+
+.promo-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+
+.service-hero{
+
+    position: relative;
+
+    max-width: 1400px;
+
+    margin: 60px auto;
+
+    height: 450px;
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    box-shadow: 0 25px 60px rgba(0,0,0,.25);
+}
+
+.service-hero{
+
+    height: 650px;
+
+    border-radius: 30px;
+
+    background-image: url("IMG/concesionario.jpg");
+
+    background-size: contain;
+
+    background-repeat: no-repeat;
+
+    background-position: center;
+
+    background-color: #111;
+}
+
+.service-hero{
+    position: relative;
+    max-width: 1400px;
+    margin: 60px auto;
+    height: 600px; /* prueba entre 450 y 600 */
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.service-hero img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+}
+
+.hero-overlay{
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 60px;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(0,0,0,.75),
+        rgba(0,0,0,.15)
+    );
+}
+
+.hero-overlay span{
+
+    color: #4d6cff;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+.hero-overlay h1{
+
+    color: white;
+
+    font-size: 56px;
+
+    max-width: 700px;
+
+    margin: 15px 0;
+}
+
+.hero-overlay p{
+
+    color: #e5e5e5;
+
+    font-size: 20px;
+
+    max-width: 550px;
+}
+
+
+.service-stats{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+    margin-bottom:60px;
+
+    flex-wrap:wrap;
+}
+
+.stat{
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(12px);
+
+    padding:25px 40px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    color:white;
+
+    min-width:220px;
+}
+
+.stat h3{
+
+    font-size:38px;
+
+    color:#4d6cff;
+}
+
+
+/* ================================= */
+/* SECCIÓN */
+/* ================================= */
+
+.service-section{
+
+    position: relative;
+
+    padding: 100px 40px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #0f1015,
+        #1a1b23
+    );
+
+    overflow: hidden;
+}
+
+/* GLOW */
+
+.service-glow{
+
+    position: absolute;
+
+    top: -150px;
+    right: -150px;
+
+    width: 400px;
+    height: 400px;
+
+    background: #0018ff;
+
+    filter: blur(180px);
+
+    opacity: .18;
+}
+
+/* HEADER */
+
+.service-header{
+
+    text-align: center;
+
+    max-width: 900px;
+
+    margin: auto;
+
+    margin-bottom: 60px;
+
+    position: relative;
+    z-index: 2;
+}
+
+.service-header span{
+
+    color: #4d6cff;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.service-header h2{
+
+    color: white;
+
+    font-size: 48px;
+
+    margin: 15px 0;
+}
+
+.service-header p{
+
+    color: #cfcfcf;
+
+    line-height: 1.7;
+}
+
+/* GRID */
+
+.service-grid{
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 40px;
+
+    max-width: 1400px;
+
+    margin: auto;
+
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+/* FORM */
+
+.service-form{
+
+    background: rgba(255,255,255,.05);
+
+    backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    border-radius: 25px;
+
+    padding: 35px;
+}
+
+.service-form form{
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.service-form input,
+.service-form select,
+.service-form textarea{
+
+    background: rgba(255,255,255,.08);
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    color: white;
+
+    padding: 16px;
+
+    border-radius: 12px;
+
+    outline: none;
+}
+
+.service-form textarea{
+
+    height: 120px;
+
+    resize: none;
+}
+
+/* BOTÓN */
+
+.service-form button{
+
+    margin-top: 10px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    padding: 18px;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    background:
+    linear-gradient(
+        90deg,
+        #0018ff,
+        #3152ff
+    );
+
+    box-shadow:
+    0 10px 25px rgba(0,24,255,.35);
+}
+
+/* MAPA */
+
+.map-card{
+
+    overflow: hidden;
+
+    border-radius: 25px;
+
+    height: 420px;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,.25);
+}
+
+.map-card iframe{
+
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+}
+
+/* INFO */
+
+.info-cards{
+
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 15px;
+
+    margin-top: 20px;
+}
+
+.info-card{
+
+    background: rgba(255,255,255,.05);
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    border-radius: 18px;
+
+    padding: 20px;
+
+    text-align: center;
+
+    color: white;
+}
+
+.info-card h4{
+
+    margin-bottom: 10px;
+}
+
+/* ACCIONES */
+
+.service-actions{
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 20px;
+}
+
+.service-actions a{
+
+    flex: 1;
+
+    text-align: center;
+
+    padding: 16px;
+
+    text-decoration: none;
+
+    color: white;
+
+    border-radius: 12px;
+
+    font-weight: 700;
+}
+
+.btn-location{
+
+    background: #20222d;
+}
+
+.btn-whatsapp{
+
+    background:
+    linear-gradient(
+        90deg,
+        #00c853,
+        #00e676
+    );
+}
+
+/* RESPONSIVE */
+
+@media(max-width:991px){
+
+    .service-grid{
+
+        grid-template-columns: 1fr;
+    }
+
+    .info-cards{
+
+        grid-template-columns: 1fr;
+    }
+
+    .service-actions{
+
+        flex-direction: column;
+    }
+
+    .service-header h2{
+
+        font-size: 34px;
+    }
+}
+
+/* ================================= */
+/* BENEFICIOS PREMIUM */
+/* ================================= */
+
+.service-benefits{
+
+    max-width: 1400px;
+
+    margin: 80px auto 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+/* TARJETA */
+
+.benefit-card{
+
+    background: rgba(255,255,255,.05);
+
+    backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    border-radius: 24px;
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    transition: .35s ease;
+
+    color: white;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+/* GLOW */
+
+.benefit-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-40px;
+    right:-40px;
+
+    width:120px;
+    height:120px;
+
+    background:#003cff;
+
+    border-radius:50%;
+
+    filter:blur(70px);
+
+    opacity:.15;
+}
+
+/* HOVER */
+
+.benefit-card:hover{
+
+    transform: translateY(-10px);
+
+    border-color: rgba(77,108,255,.4);
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.25);
+}
+
+/* ICONO */
+
+.benefit-icon{
+
+    width:80px;
+    height:80px;
+
+    margin:auto;
+    margin-bottom:20px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    font-size:38px;
+
+    border-radius:50%;
+
+    background:
+    linear-gradient(
+        135deg,
+        #0018ff,
+        #4d6cff
+    );
+
+    box-shadow:
+    0 10px 30px rgba(0,24,255,.35);
+}
+
+/* TITULO */
+
+.benefit-card h3{
+
+    font-size:22px;
+
+    margin-bottom:15px;
+}
+
+/* TEXTO */
+
+.benefit-card p{
+
+    color:#d6d6d6;
+
+    line-height:1.6;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:991px){
+
+    .service-benefits{
+
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:600px){
+
+    .service-benefits{
+
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* ================================= */
+/* FOOTER PREMIUM */
+/* ================================= */
+
+.premium-footer{
+
+    background:
+    linear-gradient(
+        180deg,
+        #050505,
+        #111111
+    );
+
+    color:white;
+
+    padding-top:80px;
+
+    margin-top:100px;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+/* GLOW AZUL */
+
+.premium-footer::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-100px;
+    left:-100px;
+
+    width:350px;
+    height:350px;
+
+    background:#0018ff;
+
+    border-radius:50%;
+
+    filter:blur(150px);
+
+    opacity:.15;
+}
+
+/* CONTENEDOR */
+
+.footer-container{
+
+    max-width:1400px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    2fr 1fr 1fr 1fr;
+
+    gap:50px;
+
+    padding:0 40px 60px;
+}
+
+/* LOGO */
+
+.footer-brand img{
+
+    width:80px;
+
+    margin-bottom:15px;
+}
+
+.footer-brand h2{
+
+    margin-bottom:15px;
+
+    font-size:28px;
+}
+
+.footer-brand p{
+
+    color:#bdbdbd;
+
+    line-height:1.8;
+}
+
+/* TITULOS */
+
+.footer-links h3,
+.footer-contact h3,
+.footer-hours h3{
+
+    margin-bottom:20px;
+
+    color:#4d6cff;
+}
+
+/* LINKS */
+
+.footer-links{
+
+    display:flex;
+
+    flex-direction:column;
+}
+
+.footer-links a{
+
+    color:#d8d8d8;
+
+    text-decoration:none;
+
+    margin-bottom:12px;
+
+    transition:.3s;
+}
+
+.footer-links a:hover{
+
+    color:#4d6cff;
+
+    transform:translateX(5px);
+}
+
+/* CONTACTO */
+
+.footer-contact p{
+
+    margin-bottom:15px;
+
+    color:#d8d8d8;
+}
+
+/* HORARIOS */
+
+.footer-hours p{
+
+    margin-top:15px;
+
+    margin-bottom:5px;
+
+    font-weight:600;
+}
+
+.footer-hours span{
+
+    color:#bdbdbd;
+}
+
+/* REDES */
+
+.social-icons{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:25px;
+}
+
+.social-icons a{
+
+    width:45px;
+    height:45px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#181818;
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:.3s;
+}
+
+.social-icons a:hover{
+
+    background:#0018ff;
+
+    transform:translateY(-5px);
+}
+
+/* COPYRIGHT */
+
+.footer-bottom{
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    text-align:center;
+
+    padding:25px;
+}
+
+.footer-bottom p{
+
+    color:#9c9c9c;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:991px){
+
+    .footer-container{
+
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .footer-container{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+    }
+
+    .social-icons{
+
+        justify-content:center;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================================= */
+/* RESPONSIVE GENERAL MOTO YA */
+/* ================================= */
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    overflow-x:hidden;
+}
+
+body{
+    overflow-x:hidden;
+}
+
+/* IMAGENES */
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+/* TABLET */
+
+@media (max-width:991px){
+
+    nav{
+        flex-direction:column;
+        height:auto;
+        padding:20px;
+        gap:20px;
+    }
+
+    .logos{
+        justify-content:center;
+    }
+
+    .logo{
+        width:220px;
+        height:auto;
+    }
+
+    .menu{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+        margin-right:0;
+        padding:0;
+    }
+
+    .service-hero{
+        height:450px;
+        margin:30px 15px;
+    }
+
+    .hero-overlay{
+        padding:30px;
+    }
+
+    .hero-overlay h1{
+        font-size:40px;
+    }
+
+    .hero-overlay p{
+        font-size:18px;
+    }
+
+    .service-stats{
+        padding:0 20px;
+    }
+
+    .stat{
+        min-width:180px;
+    }
+
+}
+
+/* CELULAR */
+
+@media (max-width:768px){
+
+    nav{
+        padding:15px;
+    }
+
+    .logo{
+        width:180px;
+    }
+
+    .menu{
+        flex-direction:column;
+        align-items:center;
+        width:100%;
+        gap:12px;
+    }
+
+    .menu li{
+        width:100%;
+        text-align:center;
+    }
+
+    .submenu{
+        position:static;
+        opacity:1;
+        visibility:visible;
+        transform:none;
+        display:none;
+        width:100%;
+        margin-top:10px;
+    }
+
+    .dropdown:hover .submenu{
+        display:block;
+    }
+
+    .promo-section{
+        padding:15px;
+        gap:15px;
+    }
+
+    .promo-card{
+        height:180px;
+    }
+
+    .service-hero{
+        height:350px;
+        margin:20px 10px;
+        border-radius:20px;
+    }
+
+    .hero-overlay{
+        padding:20px;
+    }
+
+    .hero-overlay span{
+        font-size:12px;
+    }
+
+    .hero-overlay h1{
+        font-size:30px;
+        line-height:1.1;
+    }
+
+    .hero-overlay p{
+        font-size:15px;
+    }
+
+    .service-section{
+        padding:60px 20px;
+    }
+
+    .service-header h2{
+        font-size:30px;
+    }
+
+    .service-header p{
+        font-size:15px;
+    }
+
+    .stat{
+        width:100%;
+    }
+
+    .map-card{
+        height:300px;
+    }
+
+    .info-card{
+        padding:15px;
+    }
+
+    .benefit-card{
+        padding:25px 20px;
+    }
+
+    .footer-container{
+        padding:0 20px 40px;
+    }
+
+}
+
+/* CELULARES PEQUEÑOS */
+
+@media (max-width:480px){
+
+    .logo{
+        width:150px;
+    }
+
+    .hero-overlay h1{
+        font-size:24px;
+    }
+
+    .hero-overlay p{
+        font-size:14px;
+    }
+
+    .service-header h2{
+        font-size:26px;
+    }
+
+    .promo-card{
+        height:150px;
+    }
+
+    .service-hero{
+        height:280px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+
+
+    <nav>
+
+<div class="logos">
+        <img src="IMG/MOTOYA.png" class="logo">
+       
+    </div>
+
+    <ul class="menu">
+        <li><a href="motoya.html">Inicio</a></li>
+        <li class="dropdown">
+            <a href="#">Motos ▾</a>
+            <ul class="submenu">
+                <li><a href="AUTOMATICAS.HTML">Automaticas</a></li>
+                <li><a href="semiautomaticas.html">Semiautomaticas</a></li>
+                <li><a href="ENDURO.HTML">Enduro</a></li>
+                <li><a href="SPORT.HTML">Sport</a></li>
+                <li><a href="ADVENTURE.HTML">V-STROM</a></li>
+                <li><a href="ALTOCC.HTML">Alto cilindraje</a></li>
+               
+            </ul>
+        </li>
+        
+        <li><a href="FINANCIACION.HTML">Financiación</a></li>
+        <li class="dropdown">
+            <a href="#">Servicio Tecnico ▾</a>
+            <ul class="submenu">
+                <li><a href="citas.html">Agendar cita</a></li>
+                <li><a href="#">Repuestos/Accesorios</a></li>
+            </ul>
+        </li>
+    </ul>
+
+    
+</nav>
+
+<section class="promo-section">
+
+    <div class="promo-card">
+        <img src="IMG/PROMOGN125.jpg">
+
+        
+    </div>
+
+    <div class="promo-card">
+        <img src="IMG/PROMOBURG.jpg">
+
+        
+    </div>
+
+    <div class="promo-card">
+        <img src="IMG/PROMOAX4.jpg">
+
+        
+    </div>
+
+    <div class="promo-card">
+        <img src="IMG/PROMOGN16.jpg">
+
+    
+    </div>
+
+</section>
+
+<div class="service-hero">
+
+    <img src="IMG/FACHADA.jpeg" alt="Concesionario">
+
+    <div class="hero-overlay">
+
+        <span>SUZUKI | MOTO YA</span>
+
+        <h1>
+            Mantenimiento Profesional para tu Motocicleta
+        </h1>
+
+        <p>
+            Técnicos certificados, repuestos originales y atención especializada.
+        </p>
+
+    </div>
+
+</div>
+
+<div class="service-stats">
+
+    <div class="stat">
+        <h3>44+</h3>
+        <p style="color: #000000;">Años de trayectoria</p>
+    </div>
+
+    <div class="stat">
+        <h3>100%</h3>
+        <p style="color: #000000;">Repuestos originales</p>
+    </div>
+
+    <div class="stat">
+        <h3>+20</h3>
+        <p style="color: #000000;">Referencias de motos disponibles</p>
+    </div>
+
+</div>
+
+<section class="service-section">
+
+    <div class="service-glow"></div>
+
+    <div class="service-header">
+        <span>SUZUKI | MOTO YA</span>
+        <h2>Agenda tu Servicio Técnico</h2>
+        <p>
+            Agenda tu cita con nuestros técnicos especializados y mantén tu motocicleta en óptimas condiciones.
+        </p>
+    </div>
+
+    <div class="service-grid">
+
+        <!-- FORMULARIO -->
+        <div class="service-form">
+
+            <form id="formCita">
+
+                <input type="text" id="nombre" placeholder="Nombre completo" required>
+
+               <input type="tel" id="celular" placeholder="Teléfono" required>
+
+                <input type="email" id="correo" placeholder="Correo electrónico" required>
+
+                <select id="motocicleta" class="select" required>
+                    <option style="color: #000000;">Selecciona tu moto</option>
+                    <option style="color: #000000;">V-STROM 160</option>
+                    <option style="color: #000000;">V-STROM 250 SX</option>
+                    <option style="color: #000000;">DR160X</option>
+                    <option style="color: #000000;">DR150</option>
+                    <option style="color: #000000;">GIXXER FI ABS</option>
+                    <option style="color: #000000;">GIXXER FI SF</option>
+                    <option style="color: #000000;">GSX-S 150</option>
+                    <option style="color: #000000;">GSX-R 150</option>
+                    <option style="color: #000000;">AX4 / ABS</option>
+                    <option style="color: #000000;">GN125 EIII/ABS</option>
+                    <option style="color: #000000;">VIVA R STYLE</option>
+                    <option style="color: #000000;">VIVA FI ABS</option>
+                </select>
+
+                <select id="servicio" class="select" required>
+                    <option style="color: #000000;">Tipo de servicio</option>
+                    <option style="color: #000000;">Mantenimiento Preventivo TREN DELANTERO</option>
+                    <option style="color: #000000;">Mantenimiento Preventivo TREN TRASERO</option>
+                    <option style="color: #000000;">Garantía</option>
+                    <option style="color: #000000;">Mantenimiento General</option>
+                    <option style="color: #000000;">Cambio de Aceite</option>
+                    <option style="color: #000000;">REV 1 GARANTIA 900 A 1,100 KM</option>
+                    <option style="color: #000000;">REV 2 GARANTIA 2,900 A 3,100 KM</option>
+                    <option style="color: #000000;">REV 3 GARANTIA 5,900 A 6,100 KM</option>
+                    <option style="color: #000000;">REV 4 GARANTIA 8,900 A 9,100 KM</option>
+                    <option style="color: #000000;">REV 5 GARANTIA 11,900 A 12,100 KM</option>
+                    <option style="color: #000000;">REV 6 GARANTIA 14,900 A 15,100 KM</option>
+                    <option style="color: #000000;">REV 7 GARANTIA 17,900 A 18,100 KM</option>
+                </select>
+
+                <input type="date" id="fecha" required>
+
+                <select id="hora" class="select" required style="color: grey">
+                <option value="">Seleccione una hora</option>
+                </select>
+
+                <textarea id="observaciones" placeholder="Describe cualquier novedad o inconveniente"></textarea>
+
+                <button type="submit">
+                    AGENDAR CITA
+                </button>
+
+            </form>
+
+        </div>
+
+        <!-- PANEL DERECHO -->
+        <div class="service-side">
+
+            <div class="map-card">
+
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.76202076568!2d-76.51961292526859!3d3.4081099965664503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a7fd2e48de0d%3A0x8388fd0a91d5a977!2sSuzuki!5e0!3m2!1sen!2sco!4v1781017808242!5m2!1sen!2sco"
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+            <div class="info-cards">
+
+                <div class="info-card">
+                    <h4>📍 Dirección</h4>
+                    <p>Cra 46 # 38 a 28 Mariano Ramos Cali, Valle del Cauca</p>
+                </div>
+
+                <div class="info-card">
+                    <h4>☎ Contacto</h4>
+                    <p>+57 301 687 2703</p>
+                </div>
+
+                <div class="info-card">
+                    <h4>🕒 Horarios</h4>
+                    <p>Lun - vie <br>8:30 AM - 7:00 PM</p>
+                    <p>Sab<br>9:00 AM - 3:30 PM</p>
+                </div>
+
+            </div>
+
+            <div class="service-actions">
+
+                <a href="https://www.google.com/maps/dir/3.4082602,-76.5168232/Suzuki,+Cra.+46+%2338a-28,+Mariano+Ramos,+Cali,+Valle+del+Cauca/@3.4083377,-76.5195292,17z/data=!3m1!4b1!4m18!1m7!3m6!1s0x8e30a7fd2e48de0d:0x8388fd0a91d5a977!2sSuzuki!8m2!3d3.40811!4d-76.517038!16s%2Fg%2F11z58qyl0d!4m9!1m1!4e1!1m5!1m1!1s0x8e30a7fd2e48de0d:0x8388fd0a91d5a977!2m2!1d-76.517038!2d3.40811!3e0?entry=ttu&g_ep=EgoyMDI2MDYwMy4xIKXMDSoASAFQAw%3D%3D" class="btn-location">
+                    Cómo llegar
+                </a>
+
+                <a href="https://wa.me/573016872703" class="btn-whatsapp">
+                    WhatsApp
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- BENEFICIOS -->
+
+<div class="service-benefits">
+
+    <div class="benefit-card">
+
+        <div class="benefit-icon">🔧</div>
+
+        <h3 style="color: #000000;">Técnicos Certificados</h3>
+
+        <p style="color: #20222d;">
+            Personal capacitado para brindar mantenimiento y diagnóstico especializado.
+        </p>
+
+    </div>
+
+    <div class="benefit-card">
+
+        <div class="benefit-icon">🏍️</div>
+
+        <h3 style="color: #000000;">Repuestos Originales</h3>
+
+        <p style="color: #20222d;">
+            Utilizamos repuestos originales para garantizar el mejor rendimiento.
+        </p>
+
+    </div>
+
+    <div class="benefit-card">
+
+        <div class="benefit-icon">🛡️</div>
+
+        <h3 style="color: #000000;">Garantía Oficial</h3>
+
+        <p style="color: #20222d;">
+            Todos nuestros servicios cuentan con respaldo y garantía.
+        </p>
+
+    </div>
+
+    <div class="benefit-card">
+
+        <div class="benefit-icon">⚙️</div>
+
+        <h3 style="color: #000000;">Diagnóstico Profesional</h3>
+
+        <p style="color: #20222d;">
+            Equipos y herramientas especializadas para una revisión precisa.
+        </p>
+
+    </div>
+
+</div>
+
+
+<section class="BANNER15">
+     
+     </section>
+
+
+<footer class="premium-footer">
+
+    <div class="footer-container">
+
+        <!-- LOGO -->
+        <div class="footer-brand">
+
+            <img src="IMG/SUZUKILG.png" alt="Suzuki">
+
+            <h2>MOTO YA SAS</h2>
+
+            <p>
+                Concesionario autorizado Suzuki.
+                Venta de motocicletas, repuestos originales
+                y servicio técnico especializado.
+            </p>
+
+            <div class="social-icons">
+
+                <a href="https://www.facebook.com/share/191LvK5sGn/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>
+
+                <a href="https://www.instagram.com/somosmotoya?igsh=MWVwcWhpdzI0eGc2Ng%3D%3D&utm_source=qr"><i class="fab fa-instagram"></i></a>
+
+                <a href="https://wa.me/573016872703"><i class="fab fa-whatsapp"></i></a>
+
+                <a href="https://www.tiktok.com/@somosmotoya?_r=1&_t=ZS-96wuSXuw0EW"><i class="fab fa-youtube"></i></a>
+
+            </div>
+
+        </div>
+
+        <!-- ENLACES -->
+
+        <div class="footer-links">
+
+            <h3>Navegación</h3>
+
+            <a href="#">Inicio</a>
+            <a href="#">Motocicletas</a>
+            <a href="#">Servicio Técnico</a>
+            <a href="#">Repuestos</a>
+            <a href="#">Contáctanos</a>
+
+        </div>
+
+        <!-- CONTACTO -->
+
+        <div class="footer-contact">
+
+            <h3>Contacto</h3>
+
+            <p>📍 Cra 46 # 38 a 28 Mariano Ramos Mariano Ramos Cali, Valle del Cauca</p>
+
+            <p>📞 +57 301 687 2703</p>
+
+            <p>✉ lidersuzuki@motoya.co</p>
+
+        </div>
+
+        <!-- HORARIOS -->
+
+        <div class="footer-hours">
+
+            <h3>Horarios</h3>
+
+            <p>Lunes - Viernes</p>
+            <span>8:30 AM - 7:00 PM</span>
+
+            <p>Sábados</p>
+            <span>9:00 AM - 3:30 PM</span>
+
+            <p>Domingos y Festivos</p>
+            <span>Cerrado</span>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Moto Ya SAS · Todos los derechos reservados
+        </p>
+
+    </div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+
+const URL = "https://script.google.com/macros/s/AKfycbwAB0WXex26QIA0NDxVEtOslis7kAPpvNSpxRwMXUpm5MJ8xfXYQv13Z13h7m55KJ0N/exec";
+
+const fechaInput = document.getElementById("fecha");
+const horaSelect = document.getElementById("hora");
+
+//=========================================
+// FECHA MÍNIMA = HOY
+//=========================================
+
+const hoy = new Date();
+
+fechaInput.min = hoy.toISOString().split("T")[0];
+
+//=========================================
+// CUANDO CAMBIA LA FECHA
+//=========================================
+
+fechaInput.addEventListener("change", cargarHorariosDisponibles);
+
+//=========================================
+// CARGAR HORARIOS
+//=========================================
+
+async function cargarHorariosDisponibles(){
+
+    horaSelect.innerHTML="<option value=''>Cargando horarios...</option>";
+
+    const fecha = fechaInput.value;
+
+    if(!fecha) return;
+
+    const dia = new Date(fecha+"T00:00:00").getDay();
+
+    // Domingo
+
+    if(dia===0){
+
+        Swal.fire({
+            icon:"warning",
+            title:"Domingos no disponibles",
+            text:"Nuestro taller permanece cerrado los domingos."
+        });
+
+        fechaInput.value="";
+
+        horaSelect.innerHTML="<option value=''>Seleccione una fecha</option>";
+
+        return;
+
+    }
+
+    // Obtener horas ocupadas
+
+    let ocupadas=[];
+
+    try{
+
+        const r = await fetch(URL+"?fecha="+encodeURIComponent(fecha));
+
+        ocupadas = await r.json();
+
+    }catch(e){
+
+        console.log(e);
+
+    }
+
+    horaSelect.innerHTML="<option value=''>Seleccione una hora</option>";
+
+    let inicio;
+    let fin;
+
+    // Sábado
+
+    if(dia===6){
+
+        inicio=510; //08:30
+        fin=660;    //11:00
+
+    }else{
+
+        inicio=510; //08:30
+        fin=960;    //16:00
+
+    }
+
+    for(let minutos=inicio; minutos<=fin; minutos+=30){
+
+        // Almuerzo
+
+        if(minutos>=780 && minutos<840){
+
+            continue;
+
+        }
+
+        const hora=formatearHora(minutos);
+
+        let ocupado=false;
+
+        // Compatible con Apps Script viejo y nuevo
+
+        ocupadas.forEach(item=>{
+
+            if(typeof item==="string"){
+
+                if(item===hora){
+
+                    ocupado=true;
+
+                }
+
+            }else{
+
+                const ini=convertirMinutos(item.inicio);
+                const fin=convertirMinutos(item.fin);
+
+                if(minutos>=ini && minutos<fin){
+
+                    ocupado=true;
+
+                }
+
+            }
+
+        });
+
+        if(ocupado) continue;
+
+        const option=document.createElement("option");
+
+        option.value=hora;
+        option.textContent=hora;
+
+        horaSelect.appendChild(option);
+
+    }
+
+    if(horaSelect.options.length===1){
+
+        horaSelect.innerHTML="<option value=''>No hay horarios disponibles</option>";
+
+    }
+
+}
+
+//=========================================
+// FORMATEAR HORA
+//=========================================
+
+function formatearHora(minutos){
+
+    const h=Math.floor(minutos/60);
+
+    const m=minutos%60;
+
+    return String(h).padStart(2,"0")+":"+String(m).padStart(2,"0");
+
+}
+
+//=========================================
+// CONVERTIR A MINUTOS
+//=========================================
+
+function convertirMinutos(hora){
+
+    const partes=hora.split(":");
+
+    return Number(partes[0])*60+Number(partes[1]);
+
+}
+
+//=========================================
+// ENVIAR FORMULARIO
+//=========================================
+
+document.getElementById("formCita").addEventListener("submit",async function(e){
+
+    e.preventDefault();
+
+    const boton=this.querySelector("button");
+
+    boton.disabled=true;
+
+    boton.innerHTML="Enviando...";
+
+    const datos={
+
+        nombre:document.getElementById("nombre").value,
+
+        apellidos:"",
+
+        celular:document.getElementById("celular").value,
+
+        correo:document.getElementById("correo").value,
+
+        motocicleta:document.getElementById("motocicleta").value,
+
+        modelo:"",
+
+        placa:"",
+
+        servicio:document.getElementById("servicio").value,
+
+        fecha:document.getElementById("fecha").value,
+
+        hora:document.getElementById("hora").value,
+
+        observaciones:document.getElementById("observaciones").value
+
+    };
+
+    try{
+
+        await fetch(URL,{
+
+            method:"POST",
+
+            mode:"no-cors",
+
+            headers:{
+
+                "Content-Type":"text/plain;charset=utf-8"
+
+            },
+
+            body:JSON.stringify(datos)
+
+        });
+
+        Swal.fire({
+
+            icon:"success",
+
+            title:"¡Solicitud enviada!",
+
+            text:"Tu cita fue registrada correctamente."
+
+        });
+
+        this.reset();
+
+        horaSelect.innerHTML="<option value=''>Seleccione primero una fecha</option>";
+
+    }
+
+    catch(error){
+
+        Swal.fire({
+
+            icon:"error",
+
+            title:"Error",
+
+            text:"No fue posible enviar la solicitud."
+
+        });
+
+    }
+
+    boton.disabled=false;
+
+    boton.innerHTML="AGENDAR CITA";
+
+});
+
+</script>
+</body>
+</html>
