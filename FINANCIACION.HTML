@@ -25,9 +25,9 @@ body{font-family:Segoe UI,Tahoma,sans-serif;background:#f4f7fb;color:#111;overfl
 .stat h2{color:#003cff;font-size:3rem}
 .section{padding:90px 5%}
 .title{text-align:center;font-size:3rem;margin-bottom:50px}
-.slider{overflow:hidden;white-space:nowrap;background:#fff;padding:25px 0}
-.track{display:inline-block;animation:slide 25s linear infinite}
-.track img{height:70px;max-width:180px;object-fit:contain;margin:0 45px;vertical-align:middle}
+.slider{overflow:hidden;background:#fff;padding:25px 0;width:100%;box-shadow:0 8px 30px rgba(0,0,0,0.06);border-bottom:1px solid rgba(0,0,0,0.04)}
+.track{display:flex;align-items:center;animation:slide 25s linear infinite;width:max-content}
+.track img{height:70px;max-width:180px;object-fit:contain;margin:0 45px;display:inline-block;flex-shrink:0}
 @keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px}
 .card{background:rgba(255,255,255,.9);backdrop-filter:blur(15px);padding:30px;border-radius:25px;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,.08);transition:.35s}
@@ -727,13 +727,17 @@ nav {
         <li class="dropdown">
             <a href="#">Motos ▾</a>
             <ul class="submenu">
-                <li><a href="AUTOMATICAS.HTML">Automaticas</a></li>
-                <li><a href="semiautomaticas.html">Semiautomaticas</a></li>
-                <li><a href="ENDURO.HTML">Enduro</a></li>
-                <li><a href="SPORT.HTML">Sport</a></li>
-                <li><a href="ADVENTURE.HTML">V-STROM</a></li>
-                <li><a href="ALTOCC.HTML">Alto cilindraje</a></li>
-               
+                <li class="submenu-category">Urbanas</li>
+                <li><a href="AUTOMATICAS.HTML"><i class="fa-solid fa-motorcycle"></i> Automaticas</a></li>
+                <li><a href="semiautomaticas.html"><i class="fa-solid fa-motorcycle"></i> Semiautomaticas</a></li>
+                <li class="submenu-divider"></li>
+                <li class="submenu-category">Aventura</li>
+                <li><a href="ADVENTURE.HTML"><i class="fa-solid fa-mountain"></i> V-STROM</a></li>
+                <li><a href="ENDURO.HTML"><i class="fa-solid fa-road"></i> Enduro</a></li>
+                <li class="submenu-divider"></li>
+                <li class="submenu-category">Rendimiento</li>
+                <li><a href="SPORT.HTML"><i class="fa-solid fa-gauge-high"></i> Sport</a></li>
+                <li><a href="ALTOCC.HTML"><i class="fa-solid fa-fire"></i> Alto Cilindraje</a></li>
             </ul>
         </li>
         
