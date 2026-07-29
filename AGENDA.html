@@ -1500,7 +1500,9 @@ img{
 
                 <input type="text" id="nombre" placeholder="Nombre completo" required>
 
-               <input type="tel" id="celular" placeholder="Teléfono" required>
+                <input type="text" id="apellidos" placeholder="Apellidos" required>
+
+                <input type="tel" id="celular" placeholder="Teléfono" required>
 
                 <input type="email" id="correo" placeholder="Correo electrónico" required>
 
@@ -1541,6 +1543,10 @@ img{
                 <select id="hora" class="select" required style="color: grey">
                 <option value="">Seleccione una hora</option>
                 </select>
+
+                <input type="text" id="placa" placeholder="Placa de la motocicleta" required>
+
+                <input type="text" id="modelo" placeholder="Año del modelo (ej: 2023)" required>
 
                 <textarea id="observaciones" placeholder="Describe cualquier novedad o inconveniente"></textarea>
 
@@ -1947,6 +1953,8 @@ document.getElementById("formCita").addEventListener("submit",async function(e){
 
         nombre:document.getElementById("nombre").value,
 
+        apellidos:document.getElementById("apellidos").value,
+
         apellidos:"",
 
         celular:document.getElementById("celular").value,
@@ -1955,9 +1963,9 @@ document.getElementById("formCita").addEventListener("submit",async function(e){
 
         motocicleta:document.getElementById("motocicleta").value,
 
-        modelo:"",
+        modelo:document.getElementById("modelo").value,
 
-        placa:"",
+        placa:document.getElementById("placa").value,
 
         servicio:document.getElementById("servicio").value,
 
