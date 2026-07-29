@@ -1,8 +1,58 @@
 const HOJA = "AGENDAWEB";
 
 function doPost(e) {
-
   const datos = JSON.parse(e.postData.contents);
+
+  if (datos.tipo === "credito") {
+    return procesarCredito(datos);
+  }
+
+  return procesarCita(datos);
+}
+
+function procesarCredito(datos) {
+  try {
+    const ss = SpreadsheetApp.getActiveSpreadsheet();
+    let hoja = ss.getSheetByName("Creditos");
+
+    if (!hoja) {
+      hoja = ss.insertSheet("Creditos");
+      hoja.appendRow([
+        "Fecha", "Nombre", "Apellidos", "Cedula", "Telefono", "Correo",
+        "Ciudad", "Moto", "Entidad", "Cuota Inicial", "Ingresos",
+        "Tipo Empleo", "Tiene Moto", "Observaciones"
+      ]);
+    }
+
+    hoja.appendRow([
+      new Date(),
+      datos.nombre,
+      datos.apellidos,
+      datos.cedula,
+      datos.telefono,
+      datos.correo,
+      datos.ciudad,
+      datos.moto,
+      datos.entidad,
+      datos.cuotaInicial,
+      datos.ingresos,
+      datos.tipoEmpleo,
+      datos.tieneMoto,
+      datos.observaciones
+    ]);
+
+    return ContentService
+      .createTextOutput(JSON.stringify({ resultado: true }))
+      .setMimeType(ContentService.MimeType.JSON);
+
+  } catch(err) {
+    return ContentService
+      .createTextOutput(JSON.stringify({ resultado: false, mensaje: "Error al guardar la solicitud." }))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+}
+
+function procesarCita(datos) {
 
   const hoja = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(HOJA);
 // Verificar si la fecha y la hora ya están ocupadas
