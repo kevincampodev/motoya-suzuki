@@ -13,2509 +13,291 @@
 <link rel="icon" type="image/png" href="IMG/MOTOYAA.png">
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<style>
-    * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-body {
-    background-color: rgb(255, 255, 255);
-    color: #fff;
-}
-
-
-.logos {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.logo{
-    width: 330px;
-    height: 130px;
-    margin: 0;
-
-}
-.logo1 {
-    width: 250px;
-    height: 150px;
-    margin: 0;
-}
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: white;
-    padding: 15px 30px;
-    height: 130px;
-}
-
-/* MENU */
-.menu {
-
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    margin-right: 40px; 
-}
-
-.menu li {
-    position: relative;
-}
-
-.menu a {
-    text-decoration: none;
-    color: #111;
-    font-weight: 500;
-}
-
-/* SUBMENU */
-.submenu {
-    position: absolute;
-    top: 100%;
-    left: 0;              /* 👈 alineado al inicio del botón */
-    
-    background: #111;
-    min-width: 200px;
-    border-radius: 8px;
-    padding: 10px 0;
-
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-    transition: 0.3s;
-}
-
-/* ITEMS */
-.submenu li {
-    padding: 12px 20px;
-}
-
-.submenu li a {
-    color: white;
-}
-
-/* HOVER */
-.dropdown:hover .submenu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-/* EFECTO */
-.submenu li:hover {
-    background: #e60012;
-}
-
-
-/* HERO */
-.hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    padding: 60px;
-    background-image: url("IMG/VSTROM250.jpeg");
-    background-size: cover;        /* Ajusta toda la pantalla */
-    background-position: center;   /* Centra la imagen */
-    background-repeat: no-repeat;  /* Evita que se repita */
-   
-}
-
-.hero-text {
-    max-width: 500px;
-}
-
-.hero h2 {
-    font-size: 50px;
-    margin-bottom: 20px;
-}
-
-.hero button {
-    padding: 15px 25px;
-    border: none;
-    background: #1700e6;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-/* SECCION */
-.section {
-    padding: 80px 40px;
-    text-align: center;
-}
-
-.section h2 {
-    margin-bottom: 40px;
-     color: black;
-}
-
-/* CARDS */
-.cards {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.card {
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    width: 300px;
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-.card img {
-    width: 100%;
-}
-
-.card-content {
-    padding: 20px;
-}
-
-.card button {
-    background: #000fe6;
-    border: none;
-    padding: 10px;
-    color: white;
-    width: 100%;
-    cursor: pointer;
-}
-
-/* BENEFICIOS */
-.benefits {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-    
-}
-
-.benefit {
-    max-width: 250px;
-    color: black;
-}
-
-/* CTA */
-.cta {
-    background: black;
-    padding: 60px;
-    text-align: center;
-}
-
-
-
-
-.IMG1 {
-    height: 265px;
-    width: 100px;
-}
-
-.IMG2{
-    height: 265px;
-}
-.cta button {
-    background: rgb(23, 186, 80);
-    color: white;
-    padding: 15px 25px;
-    border: none;
-    margin-top: 20px;
-    cursor: pointer;
-}
-
-/* FOOTER */
-footer {
-    background: black;
-    text-align: center;
-    padding: 20px;
-}
-
-/* ===== FIX DROPDOWN MOTO YA ===== */
-
-.dropdown {
-    position: relative;
-}
-
-.submenu {
-    position: absolute;
-    top: 100%;
-    left: 0; /* 👈 se abre desde el botón */
-
-    min-width: 180px;
-    padding: 10px 0;
-    border-radius: 8px;
-
-    /* IMPORTANTE */
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-    transition: all 0.3s ease;
-
-    z-index: 9999;
-}
-
-/* MOSTRAR */
-.dropdown:hover .submenu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-/* ASEGURA QUE NO SE CORTE */
-nav {
-    overflow: visible;
-}
-
-.BANNER15{
-    background-image: url("IMG/BANNERAX4.jpg");
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    padding: 60px;
-    background-size: cover;        /* Ajusta toda la pantalla */
-    background-position: center;   /* Centra la imagen */
-    background-repeat: no-repeat;  /* Evita que se repita */
-}
-
-
-.producto {
-    display: flex;
-    gap: 40px;
-    padding: 40px;
-    width: 2000px;
-}
-
-/* CARRUSEL */
-
-/* CARDS */
-.cards {
-    display: flex;
-    gap: 20px;
-    padding: 40px;
-}
-
-.card {
-    background: black;
-    padding: 15px;
-    border-radius: 10px;
-}
-
-/* BENEFICIOS */
-.benefits {
-    display: flex;
-    justify-content: space-around;
-    padding: 40px;
-    background: rgb(21, 32, 198);
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .producto, .cards, .benefits {
-        flex-direction: column;
-    }
-}
-
-.H3{
-    color: white;
-}
-
-.p{
-    color: white;
-}
-
-
-.whatsapp-float {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    background: linear-gradient(135deg, #25D366, #128C7E);
-    color: white;
-    border-radius: 50px;
-    padding: 12px 18px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    text-decoration: none;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    transition: all 0.3s ease;
-    z-index: 999;
-}
-
-.whatsapp-float:hover {
-    transform: scale(1.08);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-}
-
-.whatsapp-icon {
-    font-size: 30px;
-}
-
-.whatsapp-text {
-    white-space: nowrap;
-}
-
-/* 🔥 EFECTO DE PULSO */
-.whatsapp-float::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 50px;
-    background: rgba(37, 211, 102, 0.4);
-    animation: pulse 2s infinite;
-    z-index: -1;
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); opacity: 0.6; }
-    70% { transform: scale(1.4); opacity: 0; }
-    100% { transform: scale(1.4); opacity: 0; }
-}
-
-/* 📱 RESPONSIVE (solo icono en celular) */
-@media (max-width: 600px) {
-    .whatsapp-text {
-        display: none;
-    }
-    .whatsapp-float {
-        border-radius: 50%;
-        padding: 15px;
-    }
-}
-
-
-.contenedor {
-  display: flex;
-  gap: 20px;
-  align-items: stretch;
-  flex-wrap: wrap;
-}
-
-/* COLUMNAS */
-.mapa, .instagram, .redes {
-  flex: 1;
-  min-width: 300px;
-}
-
-/* MAPA */
-.mapa iframe {
-  width: 100%;
-  height: 400px;
-  border: 0;
-  border-radius: 15px;
-}
-
-/* INSTAGRAM */
-.instagram {
-  height: 400px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 15px;
-}
-
-.instagram blockquote {
-  width: 100% !important;
-}
-
-/* REDES */
-.redes {
-  background: #111;
-  color: white;
-  height: 400px;
-  border-radius: 15px;
-  padding: 25px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 15px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-}
-
-/* TITULO */
-.redes h3 {
-  margin-bottom: 10px;
-  font-size: 22px;
-  text-align: center;
-}
-
-/* BOTONES */
-.social {
-  display: flex;
-  align-items: center;
-  justify-content: center; /* 🔥 centra todo */
-  gap: 12px;
-  padding: 12px 15px;
-  border-radius: 10px;
-  text-decoration: none;
-  color: white;
-  font-size: 15px;
-  height: 60px; /* 🔥 MISMA ALTURA PARA TODOS */
-  box-sizing: border-box;
-}
-
-/* ICONOS */
-.social i {
-  font-size: 18px;
-  width: 20px;
-  text-align: center;
-  font-size: 18px;
-}
-
-.social span {
-  flex: 1;
-  text-align: left;
-}
-
-/* COLORES POR RED */
-.whatsapp { background: #39d260; }
-.instagram { background: #9543e8; }
-.facebook { background: #4b59f1; }
-.tiktok { background: #040210; }
-
-/* HOVER */
-.social:hover {
-  transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
-}
-
-
-
-
-
-
-
-
-
-
-#carousel-home {
-  width: 100%;
-  overflow: hidden;
-}
-
-.carousel-item img {
-  width: 100%;
-  height: 600px;
-  object-fit: cover;
-}
-
-/* efecto oscuro tipo banner premium */
-.carousel-item::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.2);
-}
-
-/* botones más elegantes */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-size: 60% 60%;
-  filter: invert(1);
-}
-
-
-
-
-#carousel-home{
-    position: relative;
-}
-
-/* CAPA OSCURA */
-.carousel-item::after{
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.45);
-}
-
-/* TEXTO ENCIMA */
-.hero-text{
-    position: absolute;
-    top: 50%;
-    left: 80px;
-    transform: translateY(-50%);
-    z-index: 10;
-    color: white;
-    max-width: 500px;
-}
-
-/* TITULO */
-.hero-text h2{
-    font-size: 65px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    line-height: 1.1;
-}
-
-/* TEXTO */
-.hero-text p{
-    font-size: 20px;
-    margin-bottom: 25px;
-    color: rgba(255,255,255,0.9);
-}
-
-/* BOTON */
-.hero-text button{
-    background: #0047ff;
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    border-radius: 10px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-/* HOVER */
-.hero-text button:hover{
-    background: #002ea6;
-    transform: scale(1.05);
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px){
-
-    .hero-text{
-        left: 30px;
-        right: 30px;
-    }
-
-    .hero-text h2{
-        font-size: 38px;
-    }
-
-    .hero-text p{
-        font-size: 16px;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* CONTENEDOR GENERAL */
-.video-section{
-    display: flex;
-    gap: 25px;
-    padding: 40px;
-    align-items: flex-start;
-}
-
-/* VIDEO PRINCIPAL */
-.video-principal{
-    flex: 3;
-}
-
-.video-principal iframe{
-    width: 100%;
-    height: 600px;
-    border-radius: 15px;
-    border: none;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-}
-
-/* MINIATURAS */
-.videos-secundarios{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-/* IMAGENES */
-.videos-secundarios img{
-    width: 100%;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: 0.3s;
-    object-fit: cover;
-}
-
-/* HOVER */
-.videos-secundarios img:hover{
-    transform: scale(1.03);
-    opacity: 0.9;
-}
-
-/* RESPONSIVE */
-@media (max-width: 900px){
-
-    .video-section{
-        flex-direction: column;
-    }
-
-    .video-principal iframe{
-        height: 300px;
-    }
-
-    .videos-secundarios{
-        flex-direction: row;
-    }
-
-    .videos-secundarios img{
-        width: 33%;
-    }
-}
-
-
-.premium-footer{
-
-    background:
-    linear-gradient(
-        180deg,
-        #050505,
-        #111111
-    );
-
-    color:white;
-
-    padding-top:80px;
-
-    margin-top:100px;
-
-    position:relative;
-
-    overflow:hidden;
-}
-
-/* GLOW AZUL */
-
-.premium-footer::before{
-
-    content:"";
-
-    position:absolute;
-
-    top:-100px;
-    left:-100px;
-
-    width:350px;
-    height:350px;
-
-    background:#0018ff;
-
-    border-radius:50%;
-
-    filter:blur(150px);
-
-    opacity:.15;
-}
-
-/* CONTENEDOR */
-
-.footer-container{
-
-    max-width:1400px;
-
-    margin:auto;
-
-    display:grid;
-
-    grid-template-columns:
-    2fr 1fr 1fr 1fr;
-
-    gap:50px;
-
-    padding:0 40px 60px;
-}
-
-/* LOGO */
-
-.footer-brand img{
-
-    width:80px;
-
-    margin-bottom:15px;
-}
-
-.footer-brand h2{
-
-    margin-bottom:15px;
-
-    font-size:28px;
-}
-
-.footer-brand p{
-
-    color:#bdbdbd;
-
-    line-height:1.8;
-}
-
-/* TITULOS */
-
-.footer-links h3,
-.footer-contact h3,
-.footer-hours h3{
-
-    margin-bottom:20px;
-
-    color:#4d6cff;
-}
-
-/* LINKS */
-
-.footer-links{
-
-    display:flex;
-
-    flex-direction:column;
-}
-
-.footer-links a{
-
-    color:#d8d8d8;
-
-    text-decoration:none;
-
-    margin-bottom:12px;
-
-    transition:.3s;
-}
-
-.footer-links a:hover{
-
-    color:#4d6cff;
-
-    transform:translateX(5px);
-}
-
-/* CONTACTO */
-
-.footer-contact p{
-
-    margin-bottom:15px;
-
-    color:#d8d8d8;
-}
-
-/* HORARIOS */
-
-.footer-hours p{
-
-    margin-top:15px;
-
-    margin-bottom:5px;
-
-    font-weight:600;
-}
-
-.footer-hours span{
-
-    color:#bdbdbd;
-}
-
-/* REDES */
-
-.social-icons{
-
-    display:flex;
-
-    gap:15px;
-
-    margin-top:25px;
-}
-
-.social-icons a{
-
-    width:45px;
-    height:45px;
-
-    display:flex;
-
-    align-items:center;
-    justify-content:center;
-
-    border-radius:50%;
-
-    background:#181818;
-
-    color:white;
-
-    text-decoration:none;
-
-    transition:.3s;
-}
-
-.social-icons a:hover{
-
-    background:#0018ff;
-
-    transform:translateY(-5px);
-}
-
-/* COPYRIGHT */
-
-.footer-bottom{
-
-    border-top:1px solid rgba(255,255,255,.08);
-
-    text-align:center;
-
-    padding:25px;
-}
-
-.footer-bottom p{
-
-    color:#9c9c9c;
-}
-
-/* RESPONSIVE */
-
-@media(max-width:991px){
-
-    .footer-container{
-
-        grid-template-columns:1fr 1fr;
-    }
-
-}
-
-@media(max-width:768px){
-
-    .footer-container{
-
-        grid-template-columns:1fr;
-
-        text-align:center;
-    }
-
-    .social-icons{
-
-        justify-content:center;
-    }
-
-}
-
-
-
-
-:root{
-
-    --blue:#003DA5;
-    --red:#E30613;
-    --dark:#080C12;
-    --gray:#131922;
-    --white:#ffffff;
-
-}
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-.postventa-premium{
-
-    background:#080C12;
-    color:white;
-    font-family:'Montserrat',sans-serif;
-    overflow:hidden;
-    position:relative;
-}
-
-.sticky-bike{
-
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:80px;
-    padding:0 8%;
-    position:sticky;
-    top:0;
-}
-
-.bike-content{
-
-    width:40%;
-}
-
-.section-tag{
-
-    color:#4D89FF;
-    letter-spacing:3px;
-    font-size:.8rem;
-    font-weight:700;
-}
-
-.bike-content h2{
-
-    font-size:4rem;
-    line-height:1.05;
-    margin:25px 0;
-}
-
-.bike-content p{
-
-    color:#aeb7c4;
-    line-height:1.8;
-    margin-bottom:35px;
-}
-
-.btn-suzuki{
-
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    padding:18px 40px;
-    border-radius:50px;
-    text-decoration:none;
-    color:white;
-    background:linear-gradient(
-    135deg,
-    var(--blue),
-    #2154d8
-    );
-    transition:.4s;
-}
-
-.btn-suzuki:hover{
-
-    transform:translateY(-4px);
-}
-
-.bike-image{
-
-    width:60%;
-}
-
-.bike-image img{
-
-    width:100%;
-    max-width:900px;
-    display:block;
-    transform:scale(1);
-}
-
-.cards-container{
-
-    position:relative;
-    z-index:5;
-    padding:250px 8%;
-}
-
-.service-card{
-
-    width:550px;
-    height:350px;
-    border-radius:28px;
-    overflow:hidden;
-    position:relative;
-    margin:180px 0;
-
-    box-shadow:
-    0 30px 60px rgba(0,0,0,.4);
-
-    opacity:0;
-    transform:translateY(120px);
-}
-
-.card-left{
-
-    margin-right:auto;
-}
-
-.card-right{
-
-    margin-left:auto;
-}
-
-.service-card img{
-
-    width:100%;
-    height:100%;
-    object-fit:cover;
-
-    transition:1.2s;
-}
-
-.service-card:hover img{
-
-    transform:scale(1.12);
-}
-
-.overlay{
-
-    position:absolute;
-    inset:0;
-
-    background:
-    linear-gradient(
-    to top,
-    rgba(0,0,0,.85),
-    rgba(0,0,0,.2)
-    );
-
-    display:flex;
-    flex-direction:column;
-    justify-content:flex-end;
-
-    padding:40px;
-}
-
-.overlay h3{
-
-    font-size:2rem;
-    margin-bottom:10px;
-}
-
-.overlay p{
-
-    color:#d0d7e0;
-}
-
-.service-card::before{
-
-    content:"";
-
-    position:absolute;
-
-    top:0;
-    left:-150%;
-
-    width:60%;
-    height:100%;
-
-    background:
-    linear-gradient(
-    90deg,
-    transparent,
-    rgba(255,255,255,.25),
-    transparent
-    );
-
-    z-index:10;
-}
-
-.service-card:hover::before{
-
-    animation:shine 1.3s ease;
-}
-
-@keyframes shine{
-
-    100%{
-        left:180%;
-    }
-}
-
-.postventa-premium::after{
-
-    content:"";
-
-    position:absolute;
-
-    width:700px;
-    height:700px;
-
-    background:
-    radial-gradient(
-    circle,
-    rgba(0,61,165,.2),
-    transparent
-    );
-
-    top:10%;
-    right:-200px;
-
-    filter:blur(120px);
-}
-
-@media(max-width:991px){
-
-    .sticky-bike{
-
-        flex-direction:column;
-        padding-top:120px;
-    }
-
-    .bike-content{
-
-        width:100%;
-        text-align:center;
-    }
-
-    .bike-content h2{
-
-        font-size:2.5rem;
-    }
-
-    .bike-image{
-
-        width:100%;
-    }
-
-    .service-card{
-
-        width:100%;
-        height:300px;
-    }
-}
-
-
-
-
-
-/* ================================= */
-/* RESPONSIVE GENERAL MOTOYA HOME */
-/* ================================= */
-
-html,
-body{
-    overflow-x:hidden;
-    width:100%;
-}
-
-img{
-    max-width:100%;
-    height:auto;
-}
-
-/* CORRECCION PRINCIPAL */
-
-.producto{
-    width:100% !important;
-    max-width:1400px;
-    margin:auto;
-}
-
-/* DESKTOP MEDIANO */
-
-@media(max-width:1200px){
-
-    .hero-text h2{
-        font-size:50px;
-    }
-
-    .service-card{
-        width:100%;
-        max-width:550px;
-    }
-
-}
-
-/* TABLET */
-
-@media(max-width:991px){
-
-    nav{
-        flex-direction:column;
-        height:auto;
-        padding:20px;
-        gap:20px;
-    }
-
-    .logo{
-        width:220px;
-        height:auto;
-    }
-
-    .menu{
-        flex-wrap:wrap;
-        justify-content:center;
-        gap:15px;
-        margin-right:0;
-    }
-
-    .hero-text h2{
-        font-size:42px;
-    }
-
-    .hero-text p{
-        font-size:17px;
-    }
-
-    .cards-container{
-        padding:120px 20px;
-    }
-
-    .service-card{
-        width:100%;
-        margin:60px auto;
-        height:320px;
-    }
-
-    .footer-container{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .video-principal iframe{
-        height:400px;
-    }
-
-}
-
-/* MOVIL */
-
-@media(max-width:768px){
-
-    .logo{
-        width:170px;
-        height:auto;
-    }
-
-    .hero-text{
-        left:20px;
-        right:20px;
-    }
-
-    .hero-text h2{
-        font-size:30px;
-        line-height:1.1;
-    }
-
-    .hero-text p{
-        font-size:15px;
-    }
-
-    .hero-text button{
-        width:100%;
-    }
-
-    .video-section{
-        flex-direction:column;
-        padding:20px;
-    }
-
-    .video-principal iframe{
-        height:250px;
-    }
-
-    .videos-secundarios{
-        flex-direction:row;
-    }
-
-    .videos-secundarios img{
-        width:33%;
-    }
-
-    .cards,
-    .benefits,
-    .producto{
-        flex-direction:column;
-    }
-
-    .service-card{
-        height:280px;
-        margin:30px auto;
-    }
-
-    .overlay{
-        padding:25px;
-    }
-
-    .overlay h3{
-        font-size:1.4rem;
-    }
-
-    .sp-hero,
-    .sp-block,
-    .sp-ecstar{
-        grid-template-columns:1fr;
-    }
-
-    .sp-cards{
-        grid-template-columns:1fr;
-    }
-
-    .footer-container{
-        grid-template-columns:1fr;
-        text-align:center;
-    }
-
-    .social-icons{
-        justify-content:center;
-    }
-
-    .contenedor{
-        flex-direction:column;
-    }
-
-    .mapa,
-    .instagram,
-    .redes{
-        min-width:100%;
-    }
-
-}
-
-/* CELULARES PEQUEÑOS */
-
-@media(max-width:480px){
-
-    .hero-text h2{
-        font-size:24px;
-    }
-
-    .hero-text p{
-        font-size:14px;
-    }
-
-    .logo{
-        width:140px;
-    }
-
-    .service-card{
-        height:240px;
-    }
-
-    .overlay{
-        padding:20px;
-    }
-
-    .overlay h3{
-        font-size:1.2rem;
-    }
-
-    .whatsapp-float{
-        right:15px;
-        bottom:15px;
-    }
-
-}
-
-
-
-
-
-
-/* MOBILE FIXES */
-.hamburger{display:none;}
-@media(max-width:768px){
-nav{height:auto;padding:15px 20px;position:relative}
-.logo{width:180px;height:auto}
-.hamburger{display:flex;flex-direction:column;gap:5px;cursor:pointer}
-.hamburger span{width:28px;height:3px;background:#003DA5;border-radius:5px}
-.menu{position:fixed;top:0;right:-100%;width:280px;height:100vh;background:#fff;flex-direction:column;justify-content:center;align-items:center;transition:.4s;z-index:9999;margin-right:0}
-.menu.active{right:0}
-.hero{padding:20px;height:70vh}
-.hero h2{font-size:32px}
-.producto{width:100%!important;max-width:100%!important}
-.carousel-item img{height:500px!important;object-fit:cover}
-}
-
-</style>
 </head>
-
-<body>
+<body class="dark-page">
 
 <nav>
-
-<div class="logos">
-        <img src="IMG/MOTOYA.png" class="logo">
-       
+    <div class="logos">
+        <img src="IMG/MOTOYA.png" class="logo" alt="MotoYa" style="width:260px;height:auto;display:block;">
     </div>
-
-    <ul class="menu">
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+    </div>
+    <ul class="menu" id="mainMenu">
         <li><a href="motoya.html">Inicio</a></li>
         <li class="dropdown">
             <a href="#">Motos ▾</a>
             <ul class="submenu">
-                <li class="submenu-category">URBANAS</li>
-                <li><a href="AUTOMATICAS.HTML"><i class="fa-solid fa-motorcycle"></i> Automáticas</a></li>
-                <li><a href="semiautomaticas.html"><i class="fa-solid fa-motorcycle"></i> Semiautomáticas</a></li>
+                <li class="submenu-category">Urbanas</li>
+                <li><a href="AUTOMATICAS.HTML"><i class="fa-solid fa-motorcycle"></i> Automaticas</a></li>
+                <li><a href="semiautomaticas.html"><i class="fa-solid fa-motorcycle"></i> Semiautomaticas</a></li>
                 <li class="submenu-divider"></li>
-                <li class="submenu-category">AVENTURA</li>
+                <li class="submenu-category">Aventura</li>
                 <li><a href="ADVENTURE.HTML"><i class="fa-solid fa-mountain"></i> V-STROM</a></li>
                 <li><a href="ENDURO.HTML"><i class="fa-solid fa-road"></i> Enduro</a></li>
                 <li class="submenu-divider"></li>
-                <li class="submenu-category">RENDIMIENTO</li>
+                <li class="submenu-category">Rendimiento</li>
                 <li><a href="SPORT.HTML"><i class="fa-solid fa-gauge-high"></i> Sport</a></li>
                 <li><a href="ALTOCC.HTML"><i class="fa-solid fa-fire"></i> Alto Cilindraje</a></li>
             </ul>
         </li>
-        
         <li><a href="FINANCIACION.HTML">Financiación</a></li>
         <li class="dropdown">
             <a href="#">Servicio Tecnico ▾</a>
             <ul class="submenu">
-                <li><a href="AGENDA.html">Agendar cita</a></li>
-                <li><a href="#">Repuestos/Accesorios</a></li>
+                <li><a href="AGENDA.html"><i class="fa-solid fa-calendar"></i> Agendar cita</a></li>
+                <li><a href="#"><i class="fa-solid fa-wrench"></i> Repuestos/Accesorios</a></li>
             </ul>
         </li>
     </ul>
-
-    
 </nav>
 
-<!-- Carrusel principal -->
-<div id="carousel-home" class="carousel slide carousel-fade" data-bs-ride="carousel">
-
-  <div class="hero-text">
-    <h1>Domina la calle con Suzuki</h1>
-    <p>Potencia, diseño y tecnología en cada kilómetro.</p>
-    <button onclick="whatsapp()">Cotizar ahora</button>
-</div>
-
-  <div class="carousel-inner">
-   
-    <!-- Slide 1 -->
-    <div class="carousel-item active">
-      <a href="https://www.instagram.com/" target="_blank">
-        <img loading="lazy" src="img/VSTROM250.jpeg" class="d-block w-100" alt="Banner 1">
-      </a>
-    </div>
-
-    <!-- Slide 2 -->
-    <div class="carousel-item">
-      <a href="#">
-        <img loading="lazy" src="img/BURGMAN150.jpg" class="d-block w-100" alt="Banner 2">
-      </a>
-    </div>
-
-    <!-- Slide 3 -->
-    <div class="carousel-item">
-      <a href="#">
-        <img loading="lazy" src="img/GN160.jpeg" class="d-block w-100" alt="Banner 3">
-      </a>
-    </div>
-
-     <div class="carousel-item">
-      <a href="#">
-        <img loading="lazy" src="img/VIVA115.jpg" class="d-block w-100" alt="Banner 3">
-      </a>
-    </div>
-
-     <div class="carousel-item">
-      <a href="#">
-        <img loading="lazy" src="img/VSTROM160X.jpg" class="d-block w-100" alt="Banner 3">
-      </a>
-    </div>
-
-     <div class="carousel-item">
-      <a href="#">
-        <img loading="lazy" src="img/DR160XX.jpg" class="d-block w-100" alt="Banner 3">
-      </a>
-    </div>
-
-  </div>
-
-  <!-- Controles -->
-  <button class="carousel-control-prev" type="button" data-bs-target="#carousel-home" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </button>
-
-  <button class="carousel-control-next" type="button" data-bs-target="#carousel-home" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </button>
-
-</div>
-<br>
-<section class="suzuki-postventa">
-
-    <!-- HERO -->
-    <div class="sp-hero">
-
-        <div class="sp-hero-content">
-
-            <span class="sp-tag" style="font-size: 20px;">
-                POSTVENTA SUZUKI
-            </span>
-
-            <h2>
-                Más que mantenimiento.
-                <br>
-                Respaldamos cada kilómetro.
-            </h2>
-
-            <p>
-                Técnicos especializados, repuestos originales,
-                lubricantes ECSTAR y accesorios diseñados para
-                mantener tu Suzuki siempre lista para la aventura.
-            </p>
-
-            <a href="AGENDA.html" class="sp-btn">
-                Agenda tu servicio
-            </a>
-
+<!-- HERO CARRUSEL -->
+<section class="hero-section">
+    <div class="hero-overlay-content">
+        <span class="hero-tag">CONCESIONARIO AUTORIZADO</span>
+        <h1 class="hero-title">Domina la calle<br>con <span class="text-accent">Suzuki</span></h1>
+        <p class="hero-subtitle">Potencia, diseño y tecnología en cada kilómetro.</p>
+        <div class="hero-actions">
+            <a href="AUTOMATICAS.HTML" class="btn-primary">Ver Motocicletas</a>
+            <a href="AGENDA.html" class="btn-outline-light">Agendar Servicio</a>
         </div>
-
-        <div class="sp-hero-image">
-
-            <img loading="lazy" src="IMG/post.png" alt="Suzuki">
-
+    </div>
+    <div id="carousel-home" class="carousel slide carousel-fade hero-carousel" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="IMG/VSTROM250.png" class="d-block w-100" alt="V-STROM 250">
+            </div>
+            <div class="carousel-item">
+                <img loading="lazy" src="IMG/DR160XBANNER.png" class="d-block w-100" alt="Burgman 150">
+            </div>
+            <div class="carousel-item">
+                <img loading="lazy" src="IMG/GN160.png" class="d-block w-100" alt="GN160">
+            </div>
+            <div class="carousel-item">
+                <img loading="lazy" src="IMG/GIXXER250SF.png" class="d-block w-100" alt="Viva">
+            </div>
+            <div class="carousel-item">
+                <img loading="lazy" src="IMG/GSX1000.png" class="d-block w-100" alt="V-STROM 160X">
+            </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-home" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel-home" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+</section>
 
+<!-- STATS -->
+<section class="stats-section">
+    <div class="stats-grid">
+        <div class="stat-item reveal">
+            <h3 class="stat-number">44+</h3>
+            <p class="stat-label">Años de trayectoria</p>
+        </div>
+        <div class="stat-item reveal">
+            <h3 class="stat-number">+20</h3>
+            <p class="stat-label">Referencias disponibles</p>
+        </div>
+        <div class="stat-item reveal">
+            <h3 class="stat-number">100%</h3>
+            <p class="stat-label">Repuestos originales</p>
+        </div>
+        <div class="stat-item reveal">
+            <h3 class="stat-number">+9</h3>
+            <p class="stat-label">Entidades financieras</p>
+        </div>
+    </div>
+</section>
+
+<!-- POSTVENTA -->
+<section class="postventa-section">
+    <div class="section-glow"></div>
+
+    <div class="pv-hero reveal">
+        <div class="pv-content">
+            <span class="section-tag">POSTVENTA SUZUKI</span>
+            <h2>Más que mantenimiento.<br>Respaldamos cada kilómetro.</h2>
+            <p>Técnicos especializados, repuestos originales, lubricantes ECSTAR y accesorios diseñados para mantener tu Suzuki siempre lista para la aventura.</p>
+            <a href="AGENDA.html" class="btn-primary">Agenda tu servicio</a>
+        </div>
+        <div class="pv-image">
+            <img loading="lazy" src="IMG/post.PNG" alt="Postventa Suzuki">
+        </div>
     </div>
 
-    <!-- TALLER -->
-
-    <div class="sp-block">
-
-        <div class="sp-image">
-            <img loading="lazy" src="IMG/POSTVENTA.jpg" alt="">
+    <div class="pv-block reveal">
+        <div class="pv-block-image">
+            <img loading="lazy" src="IMG/POSTVENTA.jpg" alt="Taller Suzuki">
         </div>
-
-        <div class="sp-text">
-
-            <span style="font-size: 20px;">TALLER ESPECIALIZADO</span>
-
-            <h3>
-                Expertos Suzuki
-            </h3>
-
-            <p>
-                Nuestro equipo técnico cuenta con la experiencia,
-                capacitación y herramientas necesarias para brindar
-                diagnósticos precisos y mantenimientos de alta calidad.
-            </p>
-
+        <div class="pv-block-content">
+            <span class="section-tag">TALLER ESPECIALIZADO</span>
+            <h3>Expertos Suzuki</h3>
+            <p>Nuestro equipo técnico cuenta con la experiencia, capacitación y herramientas necesarias para brindar diagnósticos precisos y mantenimientos de alta calidad.</p>
         </div>
-
     </div>
 
-    <!-- ECSTAR -->
-
-    <div class="sp-ecstar">
-
-        <div class="sp-ecstar-content">
-
-            <span style="font-size: 20px;">ECSTAR</span>
-
-            <h3 style="color: #2a2f77;">
-                El rendimiento
-                comienza aquí.
-            </h3>
-
-            <p>
-                Lubricantes desarrollados específicamente para
-                maximizar el desempeño y prolongar la vida útil
-                de tu Suzuki.
-            </p>
-
+    <div class="pv-ecstar reveal">
+        <div class="pv-ecstar-content">
+            <span class="section-tag">ECSTAR</span>
+            <h3>El rendimiento<br>comienza aquí.</h3>
+            <p>Lubricantes desarrollados específicamente para maximizar el desempeño y prolongar la vida útil de tu Suzuki.</p>
         </div>
-
-        <div class="sp-ecstar-image">
-
+        <div class="pv-ecstar-image">
             <img loading="lazy" src="IMG/ECSTAR.jpg" alt="ECSTAR">
-
         </div>
-
     </div>
 
-    <!-- ACCESORIOS -->
-
-    <div class="sp-accessories">
-
-        <div class="sp-title">
-
-            <span style="font-size: 20px;">ACCESORIOS ORIGINALES</span>
-
-            <h3>
-                Diseñados para acompañarte
-                en cada aventura.
-            </h3>
-
+    <div class="pv-accessories reveal">
+        <div class="section-header">
+            <span class="section-tag">ACCESORIOS ORIGINALES</span>
+            <h3>Diseñados para acompañarte<br>en cada aventura.</h3>
         </div>
-
-        <div class="sp-cards">
-
-            <div class="sp-card">
-
-                <img loading="lazy" src="IMG/CASCOSSP.jpeg">
-
-                <div class="sp-card-content">
-
-                    <h2 style="color: black;">Cascos Premium</h2>
-
-                    <p>
-                        Protección, confort y estilo.
-                    </p>
-
+        <div class="pv-cards">
+            <div class="pv-card">
+                <img loading="lazy" src="IMG/CASCOSSP.jpeg" alt="Cascos Premium">
+                <div class="pv-card-content">
+                    <h4>Cascos Premium</h4>
+                    <p>Protección, confort y estilo.</p>
                 </div>
-
             </div>
-
-            <div class="sp-card">
-
-                <img loading="lazy" src="IMG/DEFENSAS.jpeg">
-
-                <div class="sp-card-content">
-
-                    <h2 style="color: black;">Equipamiento Original</h2>
-
-                    <p>
-                        Calidad diseñada para cada ruta.
-                    </p>
-
+            <div class="pv-card">
+                <img loading="lazy" src="IMG/DEFENSAS.jpeg" alt="Equipamiento">
+                <div class="pv-card-content">
+                    <h4>Equipamiento Original</h4>
+                    <p>Calidad diseñada para cada ruta.</p>
                 </div>
-
             </div>
-
         </div>
-
     </div>
 
-    <!-- CTA -->
-
-    <div class="sp-cta">
-
-        <h3>
-            Tu Suzuki merece respaldo oficial.
-        </h3>
-
-        <a href="AGENDA.html">
-            Agenda tu cita
-        </a>
-
+    <div class="pv-cta reveal">
+        <h3>Tu Suzuki merece respaldo oficial.</h3>
+        <a href="AGENDA.html" class="btn-primary">Agenda tu cita</a>
     </div>
-
 </section>
 
-
-<style>
-
-
-
-.suzuki-postventa{
-
-    font-family:'Segoe UI',sans-serif;
-    background:#fff;
-    overflow:hidden;
-}
-
-/* HERO */
-
-.sp-hero{
-
-    max-width:1400px;
-    margin:auto;
-    padding:120px 5%;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:60px;
-    align-items:center;
-}
-
-.sp-tag{
-
-    color:#003DA5;
-    font-weight:700;
-    letter-spacing:2px;
-    font-size:13px;
-}
-
-.sp-hero h2{
-
-    font-size:4rem;
-    line-height:1.05;
-    color:#111;
-    margin:25px 0;
-}
-
-.sp-hero p{
-
-    color:#666;
-    line-height:1.8;
-    margin-bottom:35px;
-    max-width:550px;
-}
-
-.sp-btn{
-
-    display:inline-block;
-    padding:16px 35px;
-    border-radius:50px;
-    background:#003DA5;
-    color:#fff;
-    text-decoration:none;
-    transition:.4s;
-}
-
-.sp-btn:hover{
-
-    background:#002d7a;
-    transform:translateY(-4px);
-}
-
-.sp-hero-image img{
-    width:100%;
-    max-width:100%;
-    height:auto;
-    display:block;
-}
-
-/* BLOQUES */
-
-.sp-block{
-
-    max-width:1400px;
-    margin:auto;
-    padding:120px 5%;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:80px;
-    align-items:center;
-}
-
-.sp-image{
-
-    border-radius:30px;
-    overflow:hidden;
-}
-
-.sp-image img{
-
-    width:100%;
-    display:block;
-    transition:1s;
-}
-
-.sp-image:hover img{
-
-    transform:scale(1.08);
-}
-
-.sp-text span{
-
-    color:#003DA5;
-    font-weight:700;
-    letter-spacing:2px;
-    font-size:13px;
-}
-
-.sp-text h3{
-
-    font-size:3rem;
-    margin:20px 0;
-    color:#111;
-}
-
-.sp-text p{
-
-    color:#666;
-    line-height:1.9;
-}
-
-/* ECSTAR */
-
-.sp-ecstar{
-
-    background:#f7f9fc;
-    margin:80px auto;
-    max-width:1400px;
-    border-radius:40px;
-    padding:100px 5%;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:80px;
-    align-items:center;
-}
-
-.sp-ecstar-content span{
-
-    color:#003DA5;
-    font-weight:700;
-}
-
-.sp-ecstar-content h3{
-
-    font-size:3.5rem;
-    margin:20px 0;
-    line-height:1.1;
-}
-
-.sp-ecstar-content p{
-
-    color:#666;
-    line-height:1.8;
-}
-
-.sp-ecstar-image img{
-
-    width:100%;
-    border-radius:30px;
-}
-
-/* ACCESORIOS */
-
-.sp-accessories{
-
-    padding:120px 5%;
-    max-width:1400px;
-    margin:auto;
-}
-
-.sp-title{
-
-    text-align:center;
-    margin-bottom:60px;
-}
-
-.sp-title span{
-
-    color:#003DA5;
-    font-weight:700;
-    letter-spacing:2px;
-    font-size:13px;
-}
-
-.sp-title h3{
-
-    font-size:3rem;
-    margin-top:20px;
-}
-
-.sp-cards{
-
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:40px;
-}
-
-.sp-card{
-
-    border-radius:30px;
-    overflow:hidden;
-    background:#fff;
-    box-shadow:0 15px 40px rgba(0,0,0,.08);
-    transition:.5s;
-}
-
-.sp-card:hover{
-
-    transform:translateY(-10px);
-}
-
-.sp-card img{
-
-    width:100%;
-    height:450px;
-    object-fit:cover;
-}
-
-.sp-card-content{
-
-    padding:30px;
-}
-
-.sp-card-content h4{
-
-    font-size:1.5rem;
-    margin-bottom:10px;
-}
-
-.sp-card-content p{
-
-    color:#666;
-}
-
-/* CTA */
-
-.sp-cta{
-
-    background:#003DA5;
-    color:white;
-    text-align:center;
-    padding:120px 5%;
-    margin-top:100px;
-}
-
-.sp-cta h3{
-
-    font-size:3rem;
-    margin-bottom:30px;
-}
-
-.sp-cta a{
-
-    display:inline-block;
-    padding:18px 40px;
-    background:white;
-    color:#003DA5;
-    text-decoration:none;
-    border-radius:50px;
-    font-weight:700;
-}
-
-/* RESPONSIVE */
-
-@media(max-width:991px){
-
-    .sp-hero,
-    .sp-block,
-    .sp-ecstar{
-
-        grid-template-columns:1fr;
-    }
-
-    .sp-cards{
-
-        grid-template-columns:1fr;
-    }
-
-    .sp-hero h2{
-
-        font-size:2.7rem;
-    }
-
-    .sp-text h3,
-    .sp-title h3,
-    .sp-ecstar-content h3,
-    .sp-cta h3{
-
-        font-size:2.2rem;
-    }
-}
-
-/* REVEAL */
-
-.hidden-section{
-
-    opacity:0;
-    transform:translateY(80px);
-    transition:1.2s cubic-bezier(.22,.61,.36,1);
-}
-
-.hidden-section.show{
-
-    opacity:1;
-    transform:translateY(0);
-}
-
-/* HERO MÁS PREMIUM */
-
-.sp-hero-image{
-
-    position:relative;
-}
-
-.sp-hero-image::before{
-
-    content:"";
-
-    position:absolute;
-
-    width:500px;
-    height:500px;
-
-    background:
-    radial-gradient(
-    rgba(0,61,165,.15),
-    transparent 70%
-    );
-
-    top:50%;
-    left:50%;
-
-    transform:
-    translate(-50%,-50%);
-
-    z-index:-1;
-}
-
-/* EFECTO GLASS */
-
-.sp-card{
-
-    backdrop-filter:blur(20px);
-}
-
-/* TRANSICIONES */
-
-.sp-card,
-.sp-btn,
-.sp-cta a,
-.sp-image img,
-.sp-ecstar-image img{
-
-    transition:.6s;
-}
-
-/* HOVER IMÁGENES */
-
-.sp-image:hover img,
-.sp-ecstar-image:hover img{
-
-    transform:scale(1.05);
-}
-
-/* TÍTULOS MÁS PREMIUM */
-
-.sp-hero h2,
-.sp-text h3,
-.sp-title h3,
-.sp-ecstar-content h3,
-.sp-cta h3{
-
-    letter-spacing:-2px;
-}
-
-/* SOMBRAS PREMIUM */
-
-.sp-card{
-
-    box-shadow:
-    0 30px 60px rgba(0,0,0,.08);
-}
-
-.sp-card:hover{
-
-    box-shadow:
-    0 40px 80px rgba(0,0,0,.15);
-}
-
-/* CTA */
-
-.sp-cta{
-
-    position:relative;
-    overflow:hidden;
-}
-
-.sp-cta::before{
-
-    content:"";
-
-    position:absolute;
-
-    width:700px;
-    height:700px;
-
-    background:
-    radial-gradient(
-    rgba(255,255,255,.15),
-    transparent
-    );
-
-    top:-300px;
-    right:-250px;
-}
-
-
-/* MOBILE FIXES */
-.hamburger{display:none;}
-@media(max-width:768px){
-nav{height:auto;padding:15px 20px;position:relative}
-.logo{width:180px;height:auto}
-.hamburger{display:flex;flex-direction:column;gap:5px;cursor:pointer}
-.hamburger span{width:28px;height:3px;background:#003DA5;border-radius:5px}
-.menu{position:fixed;top:0;right:-100%;width:280px;height:100vh;background:#fff;flex-direction:column;justify-content:center;align-items:center;transition:.4s;z-index:9999;margin-right:0}
-.menu.active{right:0}
-.hero{padding:20px;height:70vh}
-.hero h2{font-size:32px}
-.producto{width:100%!important;max-width:100%!important}
-.carousel-item img{height:500px!important;object-fit:cover}
-}
-
-</style>
-<br>
-<br>
-<h2 style="text-align: center; color: #040210;">ENTERATE AQUI DE NOTICIAS Y NUEVOS LANZAMIENTOS</h2>
-
-<div class="video-section">
-
-  <!-- VIDEO PRINCIPAL -->
-  <div class="video-principal">
-    <iframe 
-      id="mainVideo"
-      src="https://www.youtube.com/embed/z3o8nCbSjUQ?si=GOz5BpUPGpHH5hrw"
-      title="YouTube video"
-      frameborder="0"
-      allowfullscreen>
-    </iframe>
-  </div>
-
-  <!-- MINIATURAS -->
-  <div class="videos-secundarios">
-
-    <img loading="lazy" 
-      src="https://img.youtube.com/vi/uJYifSCTh9g/maxresdefault.jpg"
-      onclick="cambiarVideo('uJYifSCTh9g')">
-
-    <img loading="lazy" 
-      src="https://img.youtube.com/vi/sReILrFYBS8/maxresdefault.jpg"
-      onclick="cambiarVideo('sReILrFYBS8')">
-
-    <img loading="lazy" 
-      src="https://img.youtube.com/vi/wta8MbC_0qo/maxresdefault.jpg"
-      onclick="cambiarVideo('wta8MbC_0qo')">
-
-  </div>
-
-</div>
-
-   
-
-<section style="padding:50px; background:white;">
-
-    <h2 style="color:black; text-align:center; margin-bottom:30px;">
-        📍 VISITANOS Y CONOCENOS
-    </h2>
-
-    <div class="contenedor">
-
-  <div class="mapa">
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.7620207656705!2d-76.51961292526856!3d3.4081099965664503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a7fd2e48de0d%3A0x8388fd0a91d5a977!2sSuzuki!5e0!3m2!1sen!2sco!4v1780636119706!5m2!1sen!2sco">
-    </iframe>
-  </div>
-
-  <div class="redes">
-      <h3>Síguenos</h3>
-
-    <a href="https://wa.me/573016872703" class="social whatsapp">
-      <i class="fab fa-whatsapp"></i>
-      <span>@somosmotoya</span>
-    </a>
-
-    <a href="https://www.instagram.com/somosmotoya?igsh=MWVwcWhpdzI0eGc2Ng%3D%3D&utm_source=qr" class="social instagram">
-      <i class="fab fa-instagram"></i>
-      <span>@somosmotoya</span>
-    </a>
-
-    <a href="https://www.facebook.com/share/191LvK5sGn/?mibextid=wwXIfr" class="social facebook">
-      <i class="fab fa-facebook-f"></i>
-      <span>@somosmotoya</span>
-    </a>
-
-    <a href="https://www.tiktok.com/@somosmotoya?_r=1&_t=ZS-96wuSXuw0EW" class="social tiktok">
-      <i class="fab fa-tiktok"></i>
-      <span>@somosmotoya</span>
-    </a>
-  </div>
-
-   <div class="instagram">
-    <blockquote class="instagram-media" 
-      data-instgrm-permalink="https://www.instagram.com/reel/DYK4HofPAck/?igsh=eDd2dmxsb3E4NWhp">
-    </blockquote>
-  </div>
-
-</div>
-
-
+<!-- VIDEOS -->
+<section class="videos-section reveal">
+    <div class="section-header">
+        <span class="section-tag">CONTENIDO</span>
+        <h2>Entérate de noticias<br>y nuevos lanzamientos</h2>
+    </div>
+    <div class="videos-grid">
+        <div class="video-main">
+            <iframe id="mainVideo" src="https://www.youtube.com/embed/z3o8nCbSjUQ?si=GOz5BpUPGpHH5hrw" title="YouTube video" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-thumbs">
+            <img loading="lazy" src="https://img.youtube.com/vi/uJYifSCTh9g/maxresdefault.jpg" onclick="cambiarVideo('uJYifSCTh9g')" alt="Video 1">
+            <img loading="lazy" src="https://img.youtube.com/vi/sReILrFYBS8/maxresdefault.jpg" onclick="cambiarVideo('sReILrFYBS8')" alt="Video 2">
+            <img loading="lazy" src="https://img.youtube.com/vi/wta8MbC_0qo/maxresdefault.jpg" onclick="cambiarVideo('wta8MbC_0qo')" alt="Video 3">
+        </div>
+    </div>
 </section>
 
-     <section class="BANNER15">
-     
-     </section>
+<!-- VISITANOS -->
+<section class="visitanos-section reveal">
+    <div class="section-header">
+        <span class="section-tag">UBICACION</span>
+        <h2>Visítanos y conócenos</h2>
+    </div>
+    <div class="visitanos-grid">
+        <div class="visitanos-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.7620207656705!2d-76.51961292526856!3d3.4081099965664503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a7fd2e48de0d%3A0x8388fd0a91d5a977!2sSuzuki!5e0!3m2!1sen!2sco!4v1780636119706!5m2!1sen!2sco" loading="lazy" allowfullscreen></iframe>
+        </div>
+        <div class="visitanos-redes">
+            <h3>Síguenos</h3>
+            <a href="https://wa.me/573016872703" class="social-link whatsapp-link">
+                <i class="fab fa-whatsapp"></i><span>@somosmotoya</span>
+            </a>
+            <a href="https://www.instagram.com/somosmotoya" class="social-link instagram-link">
+                <i class="fab fa-instagram"></i><span>@somosmotoya</span>
+            </a>
+            <a href="https://www.facebook.com/share/191LvK5sGn/" class="social-link facebook-link">
+                <i class="fab fa-facebook-f"></i><span>@somosmotoya</span>
+            </a>
+            <a href="https://www.tiktok.com/@somosmotoya" class="social-link tiktok-link">
+                <i class="fab fa-tiktok"></i><span>@somosmotoya</span>
+            </a>
+        </div>
+        <div class="visitanos-instagram">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DYK4HofPAck/?igsh=eDd2dmxsb3E4NWhp"></blockquote>
+        </div>
+    </div>
+</section>
 
 <footer class="premium-footer">
-
     <div class="footer-container">
-
-        <!-- LOGO -->
         <div class="footer-brand">
-
-            <img loading="lazy" src="IMG/SUZUKILG.png" alt="Suzuki">
-
+            <img src="IMG/SUZUKILG.png" alt="Suzuki">
             <h2>MOTO YA SAS</h2>
-
-            <p>
-                Concesionario autorizado Suzuki.
-                Venta de motocicletas, repuestos originales
-                y servicio técnico especializado.
-            </p>
-
+            <p>Concesionario autorizado Suzuki. Venta de motocicletas, repuestos originales y servicio técnico especializado.</p>
             <div class="social-icons">
-
-                <a href="https://www.facebook.com/share/191LvK5sGn/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>
-
-                <a href="https://www.instagram.com/somosmotoya?igsh=MWVwcWhpdzI0eGc2Ng%3D%3D&utm_source=qr"><i class="fab fa-instagram"></i></a>
-
+                <a href="https://www.facebook.com/share/191LvK5sGn/"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/somosmotoya"><i class="fab fa-instagram"></i></a>
                 <a href="https://wa.me/573016872703"><i class="fab fa-whatsapp"></i></a>
-
-                <a href="https://www.tiktok.com/@somosmotoya?_r=1&_t=ZS-96wuSXuw0EW"><i class="fab fa-youtube"></i></a>
-
+                <a href="https://www.tiktok.com/@somosmotoya"><i class="fab fa-tiktok"></i></a>
             </div>
-
         </div>
-
-        <!-- ENLACES -->
-
         <div class="footer-links">
-
             <h3>Navegación</h3>
-
-            <a href="#">Inicio</a>
-            <a href="#">Motocicletas</a>
-            <a href="#">Servicio Técnico</a>
+            <a href="motoya.html">Inicio</a>
+            <a href="AUTOMATICAS.HTML">Motocicletas</a>
+            <a href="AGENDA.html">Servicio Técnico</a>
             <a href="#">Repuestos</a>
-            <a href="#">Contáctanos</a>
-
+            <a href="FINANCIACION.HTML">Financiación</a>
         </div>
-
-        <!-- CONTACTO -->
-
         <div class="footer-contact">
-
             <h3>Contacto</h3>
-
-            <p>📍 Cra 46 # 38 a 28 Mariano Ramos Mariano Ramos Cali, Valle del Cauca</p>
-
+            <p>📍 Cra 46 # 38 a 28 Mariano Ramos, Cali, Valle del Cauca</p>
             <p>📞 +57 301 687 2703</p>
-
             <p>✉ lidersuzuki@motoya.co</p>
-
         </div>
-
-        <!-- HORARIOS -->
-
         <div class="footer-hours">
-
             <h3>Horarios</h3>
-
             <p>Lunes - Viernes</p>
             <span>8:30 AM - 7:00 PM</span>
-
             <p>Sábados</p>
             <span>9:00 AM - 3:30 PM</span>
-
             <p>Domingos y Festivos</p>
             <span>Cerrado</span>
-
         </div>
-
     </div>
-
     <div class="footer-bottom">
-
-        <p>
-            © 2026 Moto Ya SAS · Todos los derechos reservados
-        </p>
-
+        <p>© 2026 Moto Ya SAS · Todos los derechos reservados</p>
     </div>
-
 </footer>
 
-<script>
-function whatsapp() {
-    window.open("https://wa.me/573016872703", "_blank");
-}
-</script>
-
-<script async src="https://www.instagram.com/embed.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <a href="https://wa.me/573016872703" class="whatsapp-float" target="_blank">
     <i class="fab fa-whatsapp"></i>
 </a>
+
+<script async src="https://www.instagram.com/embed.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-function cambiarVideo(id) {
-  document.getElementById("mainVideo").src =
-    "https://www.youtube.com/embed/" + id;
+function toggleMenu() {
+    document.getElementById('mainMenu').classList.toggle('active');
 }
-</script>
 
-<script>
-
-document.addEventListener("DOMContentLoaded", () => {
-
-    // REVEAL AL HACER SCROLL
-
-    const observer = new IntersectionObserver(
-
-        (entries) => {
-
-            entries.forEach(entry => {
-
-                if(entry.isIntersecting){
-
-                    entry.target.classList.add("show");
-
-                }
-
-            });
-
-        },
-
-        {
-            threshold: 0.15
-        }
-
-    );
-
-    document.querySelectorAll(
-
-        '.sp-hero-content, .sp-hero-image, .sp-image, .sp-text, .sp-ecstar-content, .sp-ecstar-image, .sp-card, .sp-cta'
-
-    ).forEach(el => {
-
-        el.classList.add("hidden-section");
-
-        observer.observe(el);
-
-    });
-
-
-
-    // PARALLAX HERO
-
-    const heroImage = document.querySelector(
-
-        '.sp-hero-image img'
-
-    );
-
-    window.addEventListener(
-
-        'scroll',
-
-        () => {
-
-            let scrolled = window.pageYOffset;
-
-            heroImage.style.transform =
-
-            `translateY(${scrolled * 0.08}px)`;
-
-        }
-
-    );
-
-
-
-    // PARALLAX ECSTAR
-
-    const ecstarImage = document.querySelector(
-
-        '.sp-ecstar-image img'
-
-    );
-
-    window.addEventListener(
-
-        'scroll',
-
-        () => {
-
-            const speed = window.pageYOffset * 0.03;
-
-            ecstarImage.style.transform =
-
-            `translateY(${speed}px)`;
-
-        }
-
-    );
-
-
-
-    // HOVER 3D TARJETAS
-
-    document.querySelectorAll('.sp-card')
-
-    .forEach(card => {
-
-        card.addEventListener('mousemove',
-
-        e => {
-
-            const rect = card.getBoundingClientRect();
-
-            const x = e.clientX - rect.left;
-
-            const y = e.clientY - rect.top;
-
-            const centerX = rect.width / 2;
-
-            const centerY = rect.height / 2;
-
-            const rotateX =
-
-                (y - centerY) / 20;
-
-            const rotateY =
-
-                (centerX - x) / 20;
-
-            card.style.transform =
-
-                `perspective(1000px)
-                 rotateX(${rotateX}deg)
-                 rotateY(${rotateY}deg)
-                 translateY(-10px)`;
-
-        });
-
-        card.addEventListener('mouseleave',
-
-        () => {
-
-            card.style.transform =
-
-            'perspective(1000px) rotateX(0) rotateY(0)';
-
-        });
-
-    });
-
-
-
-    // EFECTO BOTÓN CTA
-
-    const buttons = document.querySelectorAll(
-
-        '.sp-btn, .sp-cta a'
-
-    );
-
-    buttons.forEach(btn => {
-
-        btn.addEventListener(
-
-            'mouseenter',
-
-            () => {
-
-                btn.style.transform =
-                'translateY(-5px) scale(1.03)';
-
-            }
-
-        );
-
-        btn.addEventListener(
-
-            'mouseleave',
-
-            () => {
-
-                btn.style.transform =
-                'translateY(0) scale(1)';
-
-            }
-
-        );
-
-    });
-
+function cambiarVideo(id) {
+    document.getElementById('mainVideo').src = 'https://www.youtube.com/embed/' + id;
+}
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav');
+    if (window.scrollY > 50) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
 });
-
-</script>
-
-<script>
-const hb=document.querySelector('.hamburger');
-const mn=document.querySelector('.menu');
-if(hb){hb.addEventListener('click',()=>{mn.classList.toggle('active');});}
 </script>
 </body>
 </html>
