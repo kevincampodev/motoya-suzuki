@@ -1,1090 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Motos Automaticas Suzuki | MotoYa Cali</title>
+<meta name="description" content="Encuentra las mejores motos automaticas Suzuki en MotoYa Cali. Burgman, Avenis, Address y mas modelos con financiacion disponible.">
+<meta property="og:title" content="Motos Automaticas Suzuki | MotoYa Cali">
+<meta property="og:description" content="Encuentra las mejores motos automaticas Suzuki en MotoYa Cali. Burgman, Avenis, Address y mas modelos con financiacion disponible.">
+<meta property="og:image" content="IMG/MOTOYA.png">
+<meta property="og:type" content="website">
 <link rel="icon" type="image/png" href="IMG/MOTOYAA.png">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-body {
-    background-color: white;
-    color: #fff;
-    overflow-x: hidden;
-}
-
-
-.logos {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.logo{
-    width: 330px;
-    height: 130px;
-    margin: 0;
-
-}
-.logo1 {
-    width: 250px;
-    height: 150px;
-    margin: 0;
-}
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: white;
-    padding: 15px 30px;
-    height: 130px;
-}
-
-/* MENU */
-.menu {
-
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    margin-right: 40px; 
-}
-
-.menu li {
-    position: relative;
-}
-
-.menu a {
-    text-decoration: none;
-    color: #111;
-    font-weight: 500;
-}
-
-/* SUBMENU */
-.submenu {
-    position: absolute;
-    top: 100%;
-    left: 0;              /* 👈 alineado al inicio del botón */
-    
-    background: #111;
-    min-width: 200px;
-    border-radius: 8px;
-    padding: 10px 0;
-
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-    transition: 0.3s;
-}
-
-/* ITEMS */
-.submenu li {
-    padding: 12px 20px;
-}
-
-.submenu li a {
-    color: white;
-}
-
-/* HOVER */
-.dropdown:hover .submenu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-/* EFECTO */
-.submenu li:hover {
-    background: #e60012;
-}
-
-
-/* HERO */
-.hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    padding: 60px;
-    background-image: url("IMG/VSTROM250.jpeg");
-    background-size: cover;        /* Ajusta toda la pantalla */
-    background-position: center;   /* Centra la imagen */
-    background-repeat: no-repeat;  /* Evita que se repita */
-   
-}
-
-.hero-text {
-    max-width: 500px;
-}
-
-.hero h2 {
-    font-size: 50px;
-    margin-bottom: 20px;
-}
-
-.hero button {
-    padding: 15px 25px;
-    border: none;
-    background: #1700e6;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-/* SECCION */
-.section {
-    padding: 80px 40px;
-    text-align: center;
-}
-
-.section h2 {
-    margin-bottom: 40px;
-}
-
-/* CARDS */
-.cards{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    max-width: 1200px;
-    margin: auto;
-}
-
-.card{
-    background: #141414;
-    border-radius: 20px;
-    overflow: hidden;
-    transition: 0.3s;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
-    padding-bottom: 20px;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-.card img{
-    width: 100%;
-    height: 420px;
-    object-fit: contain;
-    padding: 20px;
-    background: white;
-}
-
-.card-content {
-    padding: 20px;
-}
-
-@media (max-width: 768px){
-
-    .cards{
-        grid-template-columns: 1fr;
-    }
-
-    .card img{
-        height: 300px;
-    }
-
-}
-
-.card button {
-    background: #000fe6;
-    border: none;
-    padding: 10px;
-    color: white;
-    width: 100%;
-    cursor: pointer;
-}
-
-/* BENEFICIOS */
-.benefits {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-}
-
-.benefit {
-    max-width: 250px;
-}
-
-/* CTA */
-.cta {
-    background: #000fe6;
-    padding: 60px;
-    text-align: center;
-}
-
-.BANNER15{
-    background-image: url("IMG/BURGMAN125.jpeg");
-    height: 90vh;
-    display: flex;
-    align-items: center;
-    padding: 60px;
-    background-size: cover;        /* Ajusta toda la pantalla */
-    background-position: center;   /* Centra la imagen */
-    background-repeat: no-repeat;  /* Evita que se repita */
-     object-fit: contain;
-}
-
-
-
-
-.cta button {
-    background: black;
-    color: white;
-    padding: 15px 25px;
-    border: none;
-    margin-top: 20px;
-    cursor: pointer;
-}
-
-/* FOOTER */
-footer {
-    background: black;
-    text-align: center;
-    padding: 20px;
-}
-
-/* ===== FIX DROPDOWN MOTO YA ===== */
-
-.dropdown {
-    position: relative;
-}
-
-.submenu {
-    position: absolute;
-    top: 100%;
-    left: 0; /* 👈 se abre desde el botón */
-
-    min-width: 180px;
-    padding: 10px 0;
-    border-radius: 8px;
-
-    /* IMPORTANTE */
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-    transition: all 0.3s ease;
-
-    z-index: 9999;
-}
-
-/* MOSTRAR */
-.dropdown:hover .submenu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-/* ASEGURA QUE NO SE CORTE */
-nav {
-    overflow: visible;
-}
-
-
-.slider {
-    width: 100%;
-    height: 500px;
-    overflow: hidden;
-    border-radius: 15px;
-    margin-bottom: 40px;
-}
-
-.slides {
-    display: flex;
-    width: 300%;
-    height: 100%;
-    animation: slide 12s infinite;
-}
-
-.slides img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-@keyframes slide {
-
-    0%, 30% {
-        transform: translateX(0);
-    }
-
-    35%, 65% {
-        transform: translateX(-100%);
-    }
-
-    70%, 100% {
-        transform: translateX(-200%);
-    }
-}
-
-
-
-.botones {
-    display: flex;
-    gap: 10px; /* espacio entre botones */
-    align-items: center;
-}
-
-.btn-pdf,
-.botones button {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-
-
-
-
-#carousel-home {
-  width: 100%;
-  overflow: hidden;
-}
-
-.carousel-item img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-}
-
-/* efecto oscuro tipo banner premium */
-.carousel-item::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.2);
-}
-
-/* botones más elegantes */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-size: 60% 60%;
-  filter: invert(1);
-}
-
-#carousel-home{
-    position: relative;
-}
-
-/* CAPA OSCURA */
-.carousel-item::after{
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.45);
-}
-
-
-.promo-section{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-
-    gap: 20px;
-    padding: 40px;
-
-    background: #f5f5f5;
-}
-
-/* CARD */
-.promo-card{
-    position: relative;
-
-    height: 250px;
-
-    border-radius: 20px;
-    overflow: hidden;
-
-    background: white;
-
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-
-    transition: 0.3s;
-}
-
-/* IMAGEN */
-.promo-card img{
-    width: 100%;
-    height: 100%;
-
-    object-fit: contain; /* 👈 IMPORTANTE */
-
-    background: #fff;
-
-    transition: 0.4s;
-
-    padding: 10px;
-}
-
-/* EFECTO OSCURO */
-.promo-card::after{
-    content: "";
-
-    position: absolute;
-    inset: 0;
-
-    background: linear-gradient(
-        to top,
-        rgba(0,0,0,0.55),
-        rgba(0,0,0,0.05)
-    );
-}
-
-/* TEXTO */
-.promo-overlay{
-    position: absolute;
-
-    bottom: 15px;
-    left: 15px;
-
-    z-index: 2;
-
-    color: white;
-}
-
-/* TITULO */
-.promo-overlay h3{
-    font-size: 24px;
-    font-weight: 700;
-}
-
-/* SUBTEXTO */
-.promo-overlay p{
-    font-size: 14px;
-    letter-spacing: 1px;
-}
-
-/* HOVER */
-.promo-card:hover{
-    transform: translateY(-6px);
-}
-
-.promo-card:hover img{
-    transform: scale(1.03);
-}
-
-/* TABLET */
-@media (max-width: 1100px){
-
-    .promo-section{
-        grid-template-columns: repeat(2,1fr);
-    }
-
-}
-
-/* CELULAR */
-@media (max-width: 768px){
-
-    .promo-section{
-        grid-template-columns: 1fr;
-    }
-
-}
-
-.promo-card:hover{
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
-}
-
-
-
-.video-section{
-    display: flex;
-    gap: 25px;
-    padding: 40px;
-    align-items: flex-start;
-}
-
-/* VIDEO PRINCIPAL */
-.video-principal{
-    flex: 3;
-}
-
-.video-principal iframe{
-    width: 100%;
-    height: 600px;
-    border-radius: 15px;
-    border: none;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-}
-
-
-
-/*RESPONSIVE*/
-
-
-/* ========================= */
-/* RESPONSIVE TABLET */
-/* ========================= */
-
-@media (max-width: 1024px){
-
-    nav{
-        padding: 15px;
-    }
-
-    .logo{
-        width: 220px;
-        height: auto;
-    }
-
-    .menu{
-        gap: 15px;
-        margin-right: 0;
-    }
-
-    .promo-section{
-        grid-template-columns: repeat(2,1fr);
-    }
-
-    .cards{
-        grid-template-columns: 1fr;
-    }
-
-    .video-principal iframe{
-        height: 400px;
-    }
-
-}
-
-
-/* ========================= */
-/* RESPONSIVE CELULAR */
-/* ========================= */
-
-@media (max-width: 768px){
-
-    /* NAVBAR */
-    nav{
-        flex-direction: column;
-        height: auto;
-        padding: 15px;
-        gap: 15px;
-    }
-
-    .logos{
-        justify-content: center;
-    }
-
-    .logo{
-        width: 180px;
-        height: auto;
-    }
-
-    .menu{
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-        padding: 0;
-    }
-
-    .menu a{
-        font-size: 14px;
-    }
-
-    /* PROMOS */
-    .promo-section{
-        grid-template-columns: 1fr;
-        padding: 20px;
-    }
-
-    .promo-card{
-        height: 220px;
-    }
-
-    /* CARDS MOTOS */
-    .cards{
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-
-    .card img{
-        height: 250px;
-    }
-
-    /* BOTONES */
-    .botones{
-        flex-direction: column;
-    }
-
-    .botones button,
-    .btn-pdf{
-        width: 100%;
-    }
-
-    /* VIDEO */
-    .video-section{
-        padding: 20px;
-    }
-
-    .video-principal iframe{
-        height: 250px;
-    }
-
-    /* TITULOS */
-    h1, h2{
-        font-size: 28px !important;
-    }
-
-    /* HERO */
-    .hero{
-        padding: 20px;
-        text-align: center;
-    }
-
-    .hero h2{
-        font-size: 32px;
-    }
-
-    /* BENEFICIOS */
-    .benefits{
-        flex-direction: column;
-        align-items: center;
-    }
-
-    /* CTA */
-    .cta{
-        padding: 40px 20px;
-    }
-
-    /* BANNER */
-    .BANNER15{
-        height: 100vh;
-        background-size: contain;
-    }
-
-}
-
-img{
-    max-width: 100%;
-}
-
-
-
-
-
-.slider {
-    width: 100%;
-    height: 500px;
-    overflow: hidden;
-    border-radius: 15px;
-    margin-bottom: 40px;
-}
-
-.slides {
-    display: flex;
-    width: 300%;
-    height: 100%;
-    animation: slide 12s infinite;
-}
-
-.slides img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-@keyframes slide {
-
-    0%, 30% {
-        transform: translateX(0);
-    }
-
-    35%, 65% {
-        transform: translateX(-100%);
-    }
-
-    70%, 100% {
-        transform: translateX(-200%);
-    }
-}
-
-
-.moto-wrapper{
-
-    position: relative;
-
-    width: 100%;
-    height: 420px;
-
-    background: #f3f3f3;
-
-    overflow: hidden;
-}
-
-/* IMAGENES */
-
-.moto-img{
-
-    position: absolute;
-    inset: 0;
-
-    width: 100%;
-    height: 100%;
-
-    object-fit: contain;
-
-    padding: 20px;
-
-    opacity: 0;
-
-    transition:
-    opacity .45s ease,
-    transform .45s ease;
-
-    transform: scale(.96);
-}
-
-/* IMAGEN ACTIVA */
-
-.moto-img.active{
-    opacity: 1;
-    transform: scale(1);
-}
-
-/* BOLITAS */
-
-.colors{
-
-    position: absolute;
-
-    bottom: 18px;
-    right: 18px;
-
-    display: flex;
-    gap: 12px;
-
-    z-index: 5;
-}
-
-/* DOT */
-
-.dot{
-
-    width: 18px;
-    height: 18px;
-
-    border-radius: 50%;
-
-    border: 2px solid white;
-
-    cursor: pointer;
-
-    transition: .3s;
-
-    box-shadow: 0 0 10px rgba(0,0,0,.25);
-}
-
-/* HOVER */
-
-.dot:hover{
-    transform: scale(1.2);
-}
-
-/* ACTIVO */
-
-.dot.active{
-    transform: scale(1.3);
-    box-shadow: 0 0 12px white;
-}
-
-.botones{
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-}
-
-.botones button,
-.btn-pdf{
-    width: 100%;
-}
-
-
-.premium-footer{
-
-    background:
-    linear-gradient(
-        180deg,
-        #050505,
-        #111111
-    );
-
-    color:white;
-
-    padding-top:80px;
-
-    margin-top:100px;
-
-    position:relative;
-
-    overflow:hidden;
-}
-
-/* GLOW AZUL */
-
-.premium-footer::before{
-
-    content:"";
-
-    position:absolute;
-
-    top:-100px;
-    left:-100px;
-
-    width:350px;
-    height:350px;
-
-    background:#0018ff;
-
-    border-radius:50%;
-
-    filter:blur(150px);
-
-    opacity:.15;
-}
-
-/* CONTENEDOR */
-
-.footer-container{
-
-    max-width:1400px;
-
-    margin:auto;
-
-    display:grid;
-
-    grid-template-columns:
-    2fr 1fr 1fr 1fr;
-
-    gap:50px;
-
-    padding:0 40px 60px;
-}
-
-/* LOGO */
-
-.footer-brand img{
-
-    width:80px;
-
-    margin-bottom:15px;
-}
-
-.footer-brand h2{
-
-    margin-bottom:15px;
-
-    font-size:28px;
-}
-
-.footer-brand p{
-
-    color:#bdbdbd;
-
-    line-height:1.8;
-}
-
-/* TITULOS */
-
-.footer-links h3,
-.footer-contact h3,
-.footer-hours h3{
-
-    margin-bottom:20px;
-
-    color:#4d6cff;
-}
-
-/* LINKS */
-
-.footer-links{
-
-    display:flex;
-
-    flex-direction:column;
-}
-
-.footer-links a{
-
-    color:#d8d8d8;
-
-    text-decoration:none;
-
-    margin-bottom:12px;
-
-    transition:.3s;
-}
-
-.footer-links a:hover{
-
-    color:#4d6cff;
-
-    transform:translateX(5px);
-}
-
-/* CONTACTO */
-
-.footer-contact p{
-
-    margin-bottom:15px;
-
-    color:#d8d8d8;
-}
-
-/* HORARIOS */
-
-.footer-hours p{
-
-    margin-top:15px;
-
-    margin-bottom:5px;
-
-    font-weight:600;
-}
-
-.footer-hours span{
-
-    color:#bdbdbd;
-}
-
-/* REDES */
-
-.social-icons{
-
-    display:flex;
-
-    gap:15px;
-
-    margin-top:25px;
-}
-
-.social-icons a{
-
-    width:45px;
-    height:45px;
-
-    display:flex;
-
-    align-items:center;
-    justify-content:center;
-
-    border-radius:50%;
-
-    background:#181818;
-
-    color:white;
-
-    text-decoration:none;
-
-    transition:.3s;
-}
-
-.social-icons a:hover{
-
-    background:#0018ff;
-
-    transform:translateY(-5px);
-}
-
-/* COPYRIGHT */
-
-.footer-bottom{
-
-    border-top:1px solid rgba(255,255,255,.08);
-
-    text-align:center;
-
-    padding:25px;
-}
-
-.footer-bottom p{
-
-    color:#9c9c9c;
-}
-
-/* RESPONSIVE */
-
-@media(max-width:991px){
-
-    .footer-container{
-
-        grid-template-columns:1fr 1fr;
-    }
-
-}
-
-@media(max-width:768px){
-
-    .footer-container{
-
-        grid-template-columns:1fr;
-
-        text-align:center;
-    }
-
-    .social-icons{
-
-        justify-content:center;
-    }
-
-}
-
-
-
-
-.btn-pdf{
-    display:block;
-    width:100%;
-
-    background:#0015d8;
-    color:#fff;
-
-    text-align:center;
-    text-decoration:none;
-
-    padding:10px;
-    border-radius:5px;
-
-    font-size:1.0rem;
-    font-weight:500;
-
-    transition:.3s;
-}
-
-.btn-pdf:hover{
-    transform:translateY(-3px);
-    background:#0015d8;
-}
-
-
-
-
-
-</style>
-
 </head>
-
-<body>
+<body class="dark-page">
 
 <nav>
-
-<div class="logos">
-        <img src="IMG/MOTOYA.png" class="logo">
-       
+    <div class="logos">
+        <img src="IMG/MOTOYA.png" class="logo" alt="MotoYa" style="width:260px;height:auto;display:block;">
     </div>
-
-        <ul class="menu">
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+    </div>
+    <ul class="menu" id="mainMenu">
         <li><a href="motoya.html">Inicio</a></li>
         <li class="dropdown">
             <a href="#">Motos ▾</a>
@@ -1103,496 +44,218 @@ img{
             </ul>
         </li>
         <li><a href="FINANCIACION.HTML">Financiación</a></li>
-        <li class="dropdown"> 
+        <li class="dropdown">
             <a href="#">Servicio Tecnico ▾</a>
             <ul class="submenu">
-                <li><a href="AGENDA.HTML">Agendar cita</a></li>
-                <li><a href="#">Repuestos/Accesorios</a></li>
+                <li><a href="AGENDA.html"><i class="fa-solid fa-calendar"></i> Agendar cita</a></li>
+                <li><a href="#"><i class="fa-solid fa-wrench"></i> Repuestos/Accesorios</a></li>
             </ul>
         </li>
-        
     </ul>
-
-    
 </nav>
 
-<section class="promo-section">
-
-    <div class="promo-card">
-        <img loading="lazy" src="IMG/PROMOGN125.jpg">
-
-        
+<!-- HERO -->
+<section class="cat-hero">
+    <div class="cat-hero-bg" style="background-image: url('IMG/PROMOBURG.jpg')"></div>
+    <div class="cat-hero-overlay"></div>
+    <div class="cat-hero-content">
+        <span class="section-tag">SUZUKI MOTOS</span>
+        <h1 class="cat-hero-title">Automáticas</h1>
+        <p class="cat-hero-subtitle">Comodidad, estilo y tecnología para la ciudad.</p>
     </div>
-
-    <div class="promo-card">
-        <img loading="lazy" src="IMG/PROMOBURG.jpg">
-
-        
-    </div>
-
-    <div class="promo-card">
-        <img loading="lazy" src="IMG/PROMOAX4.jpg">
-
-        
-    </div>
-
-    <div class="promo-card">
-        <img loading="lazy" src="IMG/PROMOGN16.jpg">
-
-    
-    </div>
-
 </section>
 
-<section class="section" id="motos">
+<!-- MOTOS GRID -->
+<section class="cat-section">
+    <div class="section-header reveal">
+        <span class="section-tag">CATÁLOGO</span>
+        <h2>Nuestros modelos</h2>
+    </div>
 
-    <h1 style="color: black;">AUTOMATICAS</h1>
+    <div class="motos-grid">
 
-    <br><br>
-
-    <div class="cards">
-
-        <!-- CARD 1 -->
-        <div class="card">
-
-        <!-- CONTENEDOR IMAGEN -->
-        <div class="moto-wrapper">
-
-            <!-- IMAGENES -->
-            <img loading="lazy" src="img/burgman15plata.png"
-                 class="moto-img active"
-                 id="burgman15-plata">
-
-            <img loading="lazy" src="img/burgman15ng.png"
-                 class="moto-img"
-                 id="burgman15-negra">
-
-            <img loading="lazy" src="img/burgman15bl.png"
-                 class="moto-img"
-                 id="burgman15-blanca">
-
-            <!-- BOLITAS -->
-            <div class="colors">
-
-                <span class="dot active"
-                      style="background:#c3c2c1;"
-                      onclick="changeColor('burgman15-plata', this)">
-                </span>
-
-                <span class="dot"
-                      style="background:#000000;"
-                      onclick="changeColor('burgman15-negra', this)">
-                </span>
-
-                <span class="dot"
-                      style="background:#ffffff;"
-                      onclick="changeColor('burgman15-blanca', this)">
-                </span>
-
+        <!-- BURGMAN 15 -->
+        <div class="moto-card reveal">
+            <div class="moto-img-wrapper">
+                <img src="IMG/burgman15plata.png" class="moto-img active" id="burgman15-plata" alt="Burgman 15 Plata">
+                <img loading="lazy" src="IMG/burgman15ng.png" class="moto-img" id="burgman15-negra" alt="Burgman 15 Negra">
+                <img loading="lazy" src="IMG/burgman15bl.png" class="moto-img" id="burgman15-blanca" alt="Burgman 15 Blanca">
+                <div class="color-dots">
+                    <span class="dot active" style="background:#c3c2c1;" onclick="changeColor('burgman15-plata', this)"></span>
+                    <span class="dot" style="background:#000000;" onclick="changeColor('burgman15-negra', this)"></span>
+                    <span class="dot" style="background:#ffffff;border:1px solid rgba(255,255,255,0.3);" onclick="changeColor('burgman15-blanca', this)"></span>
+                </div>
             </div>
-
+            <div class="moto-info">
+                <h3>BURGMAN 15</h3>
+                <p>Fuerza y elegancia para la ciudad.</p>
+                <div class="moto-btns">
+                    <a href="PDF/BURGMAN-15.pdf" download class="btn-ficha" target="_blank"><i class="fa-solid fa-file-pdf"></i> Ficha Técnica</a>
+                    <button onclick="whatsapp()" class="btn-cotiza"><i class="fab fa-whatsapp"></i> Cotizar</button>
+                </div>
+            </div>
         </div>
 
-        <!-- CONTENIDO -->
-        <div class="card-content">
-
-            <h3 style="color: white;">BURGMAN 15</h3>
-
-            <p style="color: white;">
-                Fuerza para cualquier terreno.
-            </p>
-
-            <br>
-
-            <div class="botones">
-
-                 <a href="PDF/BURGMAN-15.pdf" download class="btn-pdf" target="_blank">FICHA TECNICA</a>
-
-                <button onclick="whatsapp()">
-                    COTIZA AHORA
-                </button>
-
+        <!-- AVENIS -->
+        <div class="moto-card reveal">
+            <div class="moto-img-wrapper">
+                <img src="IMG/avenisng.png" class="moto-img active" id="avenis-negra" alt="Avenis Negra">
+                <img loading="lazy" src="IMG/avenisbl.png" class="moto-img" id="avenis-blanca" alt="Avenis Blanca">
+                <img loading="lazy" src="IMG/avenisama.png" class="moto-img" id="avenis-amarilla" alt="Avenis Amarilla">
+                <img loading="lazy" src="IMG/avenisgris.png" class="moto-img" id="avenis-gris" alt="Avenis Gris">
+                <div class="color-dots">
+                    <span class="dot active" style="background:#000000;" onclick="changeColor('avenis-negra', this)"></span>
+                    <span class="dot" style="background:#ffffff;border:1px solid rgba(255,255,255,0.3);" onclick="changeColor('avenis-blanca', this)"></span>
+                    <span class="dot" style="background:#eddc58;" onclick="changeColor('avenis-amarilla', this)"></span>
+                    <span class="dot" style="background:#838384;" onclick="changeColor('avenis-gris', this)"></span>
+                </div>
             </div>
+            <div class="moto-info">
+                <h3>AVENIS</h3>
+                <p>Agilidad y dinamismo en cada trayecto.</p>
+                <div class="moto-btns">
+                    <a href="PDF/AVENIS.pdf" download class="btn-ficha" target="_blank"><i class="fa-solid fa-file-pdf"></i> Ficha Técnica</a>
+                    <button onclick="whatsapp()" class="btn-cotiza"><i class="fab fa-whatsapp"></i> Cotizar</button>
+                </div>
+            </div>
+        </div>
 
+        <!-- BURGMAN FI -->
+        <div class="moto-card reveal">
+            <div class="moto-img-wrapper">
+                <img src="IMG/burgmanng.png" class="moto-img active" id="burgman-negra" alt="Burgman FI Negra">
+                <img loading="lazy" src="IMG/burgmanbl.png" class="moto-img" id="burgman-blanca" alt="Burgman FI Blanca">
+                <img loading="lazy" src="IMG/burgmangr.png" class="moto-img" id="burgman-gris" alt="Burgman FI Gris">
+                <img loading="lazy" src="IMG/burgmandora.png" class="moto-img" id="burgman-dorada" alt="Burgman FI Dorada">
+                <img loading="lazy" src="IMG/burgmanvd.png" class="moto-img" id="burgman-verde" alt="Burgman FI Verde">
+                <div class="color-dots">
+                    <span class="dot active" style="background:#000000;" onclick="changeColor('burgman-negra', this)"></span>
+                    <span class="dot" style="background:#ffffff;border:1px solid rgba(255,255,255,0.3);" onclick="changeColor('burgman-blanca', this)"></span>
+                    <span class="dot" style="background:#414141;" onclick="changeColor('burgman-gris', this)"></span>
+                    <span class="dot" style="background:#d7af75;" onclick="changeColor('burgman-dorada', this)"></span>
+                    <span class="dot" style="background:#062f03;" onclick="changeColor('burgman-verde', this)"></span>
+                </div>
+            </div>
+            <div class="moto-info">
+                <h3>BURGMAN FI</h3>
+                <p>Premium, potente y sofisticado.</p>
+                <div class="moto-btns">
+                    <a href="PDF/BURGMAN.pdf" download class="btn-ficha" target="_blank"><i class="fa-solid fa-file-pdf"></i> Ficha Técnica</a>
+                    <button onclick="whatsapp()" class="btn-cotiza"><i class="fab fa-whatsapp"></i> Cotizar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ADDRESS -->
+        <div class="moto-card reveal">
+            <div class="moto-img-wrapper">
+                <img src="IMG/addressng.png" class="moto-img active" id="AD-NEGRA" alt="Address Negra">
+                <img loading="lazy" src="IMG/addressbl.png" class="moto-img" id="AD-BLANCA" alt="Address Blanca">
+                <img loading="lazy" src="IMG/addressplata.png" class="moto-img" id="AD-PLATA" alt="Address Plata">
+                <div class="color-dots">
+                    <span class="dot active" style="background:#000000;" onclick="changeColor('AD-NEGRA', this)"></span>
+                    <span class="dot" style="background:#ffffff;border:1px solid rgba(255,255,255,0.3);" onclick="changeColor('AD-BLANCA', this)"></span>
+                    <span class="dot" style="background:#b9b3b3;" onclick="changeColor('AD-PLATA', this)"></span>
+                </div>
+            </div>
+            <div class="moto-info">
+                <h3>ADDRESS NM</h3>
+                <p>Compacta, eficiente e inteligente.</p>
+                <div class="moto-btns">
+                    <a href="PDF/ADDRESS.pdf" download class="btn-ficha" target="_blank"><i class="fa-solid fa-file-pdf"></i> Ficha Técnica</a>
+                    <button onclick="whatsapp()" class="btn-cotiza"><i class="fab fa-whatsapp"></i> Cotizar</button>
+                </div>
+            </div>
         </div>
 
     </div>
-
-        <!-- CARD 2 -->
-      <div class="card">
-
-        <!-- CONTENEDOR IMAGEN -->
-        <div class="moto-wrapper">
-
-            <!-- IMAGENES -->
-            <img loading="lazy" src="img/avenisng.png"
-                 class="moto-img active"
-                 id="avenis-negra">
-
-            <img loading="lazy" src="img/avenisbl.png"
-                 class="moto-img"
-                 id="avenis-blanca">
-
-            <img loading="lazy" src="img/avenisama.png"
-                 class="moto-img"
-                 id="avenis-amarilla">
-            
-            <img loading="lazy" src="img/avenisgris.png"
-                 class="moto-img"
-                 id="avenis-gris">
-
-
-            <!-- BOLITAS -->
-            <div class="colors">
-
-                <span class="dot active"
-                      style="background:#000000;"
-                      onclick="changeColor('avenis-negra', this)">
-                </span>
-
-                <span class="dot"
-                      style="background:#ffffff;"
-                      onclick="changeColor('avenis-blanca', this)">
-                </span>
-
-                <span class="dot"
-                      style="background:#eddc58;"
-                      onclick="changeColor('avenis-amarilla', this)">
-                </span>
-
-                <span class="dot"
-                      style="background:#838384;"
-                      onclick="changeColor('avenis-gris', this)">
-                </span>
-
-            </div>
-
-        </div>
-
-        <!-- CONTENIDO -->
-        <div class="card-content">
-
-            <h3 style="color: white;">AVENIS</h3>
-
-            <p style="color: white;">
-                Fuerza para cualquier terreno.
-            </p>
-
-            <br>
-
-            <div class="botones">
-
-                <a href="PDF/AVENIS.pdf" download class="btn-pdf" target="_blank">FICHA TECNICA</a>
-
-                <button onclick="whatsapp()">
-                    COTIZA AHORA
-                </button>
-
-            </div>
-
-        </div>
-
-    </div>
-
-        <!-- CARD 3 -->
-         <div class="card">
-
-        <!-- CONTENEDOR IMAGEN -->
-        <div class="moto-wrapper">
-
-            <!-- IMAGENES -->
-            <img loading="lazy" src="img/burgmanng.png"
-                 class="moto-img active"
-                 id="burgman-negra">
-
-            <img loading="lazy" src="img/burgmanbl.png"
-                 class="moto-img"
-                 id="burgman-blanca">
-
-            <img loading="lazy" src="img/burgmangr.png"
-                 class="moto-img"
-                 id="burgman-gris">
-            
-                 <img loading="lazy" src="img/burgmandora.png"
-                 class="moto-img"
-                 id="burgman-dorada">
-            
-                 <img loading="lazy" src="img/burgmanvd.png"
-                 class="moto-img"
-                 id="burgman-verde">
-
-            <!-- BOLITAS -->
-            <div class="colors">
-
-                <span class="dot active"
-                      style="background:#000000;"
-                      onclick="changeColor('burgman-negra', this)">
-                </span>
-
-                <span class="dot"
-                      style="background:#ffffff;"
-                      onclick="changeColor('burgman-blanca', this)">
-                </span>
-
-                <span class="dot"
-                      style="background:#414141;"
-                      onclick="changeColor('burgman-gris', this)">
-                </span>
-
-                <span class="dot"
-                      style="background:#d7af75;"
-                      onclick="changeColor('burgman-dorada', this)">
-                </span>
-
-                <span class="dot"
-                      style="background:#062f03;"
-                      onclick="changeColor('burgman-verde', this)">
-                </span>
-
-            </div>
-
-        </div>
-
-        <!-- CONTENIDO -->
-        <div class="card-content">
-
-            <h3 style="color: white;">BURGMAN FI</h3>
-
-            <p style="color: white;">
-                Fuerza para cualquier terreno.
-            </p>
-
-            <br>
-
-            <div class="botones">
-
-                 <a href="PDF/BURGMAN.pdf" download class="btn-pdf" target="_blank">FICHA TECNICA</a>
-
-                <button onclick="whatsapp()">
-                    COTIZA AHORA
-                </button>
-
-            </div>
-
-        </div>
-
-    </div>
-
-        <!-- CARD 4 -->
-      <div class="card">
-
-        <!-- CONTENEDOR IMAGEN -->
-        <div class="moto-wrapper">
-
-            <!-- IMAGENES -->
-            <img loading="lazy" src="img/addressng.png"
-                 class="moto-img active"
-                 id="AD-NEGRA">
-
-            <img loading="lazy" src="img/addressbl.png"
-                 class="moto-img"
-                 id="AD-BLANCA">
-
-            <img loading="lazy" src="img/addressplata.png"
-                 class="moto-img"
-                 id="AD-PLATA">
-
-            <!-- BOLITAS -->
-            <div class="colors">
-
-                <span class="dot active"
-                      style="background:#000000;"
-                      onclick="changeColor('AD-NEGRA', this)">
-                </span>
-
-                <span class="dot"
-                      style="background:#ffffff;"
-                      onclick="changeColor('AD-BLANCA', this)">
-                </span>
-
-                <span class="dot"
-                      style="background:#b9b3b3;"
-                      onclick="changeColor('AD-PLATA', this)">
-                </span>
-
-            </div>
-
-        </div>
-
-        <!-- CONTENIDO -->
-        <div class="card-content">
-
-            <h3 style="color: white;">ADDRESS NM</h3>
-
-            <p style="color: white;">
-                Fuerza para cualquier terreno.
-            </p>
-
-            <br>
-
-            <div class="botones">
-
-               <a href="PDF/ADDRESS.pdf" download class="btn-pdf" target="_blank">FICHA TECNICA</a>
-
-                <button onclick="whatsapp()">
-                    COTIZA AHORA
-                </button>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    </div>
-
 </section>
 
-<h2 style="text-align: center; color: #040210;"><strong>LO NUEVO EN AUTOMATICAS</strong></h2>
-
-<div class="video-section">
-
-  <!-- VIDEO PRINCIPAL -->
-  <div class="video-principal">
-    <iframe 
-      id="mainVideo"
-      src="https://www.youtube.com/embed/iFxNtBoGC1k?si=xIvEqvUVOmQlaDIk"
-      title="YouTube video"
-      frameborder="0"
-      allowfullscreen>
-    </iframe>
-  </div>
-</div>
-
-
-<section class="BANNER15">
-     
-     </section>
-
+<!-- VIDEO -->
+<section class="cat-video-section reveal">
+    <div class="section-header">
+        <span class="section-tag">CONTENIDO</span>
+        <h2>Lo nuevo en Automáticas</h2>
+    </div>
+    <div class="cat-video-wrapper">
+        <iframe src="https://www.youtube.com/embed/iFxNtBoGC1k?si=xIvEqvUVOmQlaDIk" title="YouTube video" frameborder="0" allowfullscreen></iframe>
+    </div>
+</section>
 
 <footer class="premium-footer">
-
     <div class="footer-container">
-
-        <!-- LOGO -->
         <div class="footer-brand">
-
-            <img loading="lazy" src="IMG/SUZUKILG.png" alt="Suzuki">
-
+            <img src="IMG/SUZUKILG.png" alt="Suzuki">
             <h2>MOTO YA SAS</h2>
-
-            <p>
-                Concesionario autorizado Suzuki.
-                Venta de motocicletas, repuestos originales
-                y servicio técnico especializado.
-            </p>
-
+            <p>Concesionario autorizado Suzuki. Venta de motocicletas, repuestos originales y servicio técnico especializado.</p>
             <div class="social-icons">
-
-                <a href="https://www.facebook.com/share/191LvK5sGn/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>
-
-                <a href="https://www.instagram.com/somosmotoya?igsh=MWVwcWhpdzI0eGc2Ng%3D%3D&utm_source=qr"><i class="fab fa-instagram"></i></a>
-
+                <a href="https://www.facebook.com/share/191LvK5sGn/"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/somosmotoya"><i class="fab fa-instagram"></i></a>
                 <a href="https://wa.me/573016872703"><i class="fab fa-whatsapp"></i></a>
-
-                <a href="https://www.tiktok.com/@somosmotoya?_r=1&_t=ZS-96wuSXuw0EW"><i class="fab fa-youtube"></i></a>
-
+                <a href="https://www.tiktok.com/@somosmotoya"><i class="fab fa-tiktok"></i></a>
             </div>
-
         </div>
-
-        <!-- ENLACES -->
-
         <div class="footer-links">
-
             <h3>Navegación</h3>
-
-            <a href="#">Inicio</a>
-            <a href="#">Motocicletas</a>
-            <a href="#">Servicio Técnico</a>
+            <a href="motoya.html">Inicio</a>
+            <a href="AUTOMATICAS.HTML">Motocicletas</a>
+            <a href="AGENDA.html">Servicio Técnico</a>
             <a href="#">Repuestos</a>
-            <a href="#">Contáctanos</a>
-
+            <a href="FINANCIACION.HTML">Financiación</a>
         </div>
-
-        <!-- CONTACTO -->
-
         <div class="footer-contact">
-
             <h3>Contacto</h3>
-
-            <p>📍 Cra 46 # 38 a 28 Mariano Ramos Mariano Ramos Cali, Valle del Cauca</p>
-
+            <p>📍 Cra 46 # 38 a 28 Mariano Ramos, Cali, Valle del Cauca</p>
             <p>📞 +57 301 687 2703</p>
-
             <p>✉ lidersuzuki@motoya.co</p>
-
         </div>
-
-        <!-- HORARIOS -->
-
         <div class="footer-hours">
-
             <h3>Horarios</h3>
-
             <p>Lunes - Viernes</p>
             <span>8:30 AM - 7:00 PM</span>
-
             <p>Sábados</p>
             <span>9:00 AM - 3:30 PM</span>
-
             <p>Domingos y Festivos</p>
             <span>Cerrado</span>
-
         </div>
-
     </div>
-
     <div class="footer-bottom">
-
-        <p>
-            © 2026 Moto Ya SAS · Todos los derechos reservados
-        </p>
-
+        <p>© 2026 Moto Ya SAS · Todos los derechos reservados</p>
     </div>
-
 </footer>
 
+<a href="https://wa.me/573016872703" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script>
+function toggleMenu() {
+    document.getElementById('mainMenu').classList.toggle('active');
+}
+
 function whatsapp() {
     window.open("https://wa.me/573016872703", "_blank");
 }
-</script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-<script>
-
-function changeColor(id, element){
-
-    const wrapper = element.closest('.moto-wrapper');
-
-    /* QUITAR ACTIVE */
-    wrapper.querySelectorAll('.moto-img')
-    .forEach(img=>{
-        img.classList.remove('active');
-    });
-
-    /* ACTIVAR NUEVA */
-    wrapper.querySelector('#' + id)
-    .classList.add('active');
-
-    /* DOTS */
-    wrapper.querySelectorAll('.dot')
-    .forEach(dot=>{
-        dot.classList.remove('active');
-    });
-
-    element.classList.add('active');
+function changeColor(id, dot) {
+    const wrapper = dot.closest('.moto-img-wrapper');
+    wrapper.querySelectorAll('.moto-img').forEach(img => img.classList.remove('active'));
+    wrapper.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    dot.classList.add('active');
 }
 
-</script>
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-<a href="https://wa.me/573016872703" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav');
+    if (window.scrollY > 50) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+});
+</script>
 </body>
 </html>

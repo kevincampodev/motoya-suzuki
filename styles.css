@@ -1125,3 +1125,241 @@ nav {
         bottom: 18px;
     }
 }
+
+/* ================================================
+   CATALOG PAGES — DARK THEME
+   ================================================ */
+
+/* CAT HERO */
+.cat-hero {
+    position: relative;
+    height: 60vh;
+    min-height: 400px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.cat-hero-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.05);
+    transition: transform 8s ease;
+}
+
+.cat-hero:hover .cat-hero-bg {
+    transform: scale(1);
+}
+
+.cat-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(8,12,18,1) 0%, rgba(8,12,18,0.5) 50%, rgba(8,12,18,0.2) 100%);
+}
+
+.cat-hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 60px 8%;
+}
+
+.cat-hero-title {
+    font-family: var(--font-title);
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1;
+    margin: 10px 0;
+    letter-spacing: -2px;
+}
+
+.cat-hero-subtitle {
+    color: rgba(255,255,255,0.6);
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+/* CAT SECTION */
+.cat-section {
+    background: #080C12;
+    padding: 80px 5%;
+}
+
+/* MOTOS GRID */
+.motos-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* MOTO CARD */
+.moto-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.moto-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(0,61,165,0.4);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+
+.moto-img-wrapper {
+    position: relative;
+    background: linear-gradient(135deg, #a6b7ea, #2a3c67);
+    padding: 30px;
+    min-height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.moto-img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+    display: none;
+    transition: var(--transition);
+}
+
+.moto-img.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.97); }
+    to   { opacity: 1; transform: scale(1); }
+}
+
+.color-dots {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.dot.active {
+    transform: scale(1.3);
+    box-shadow: 0 0 0 2px var(--primary-light);
+}
+
+.dot:hover {
+    transform: scale(1.2);
+}
+
+.moto-info {
+    padding: 25px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.moto-info h3 {
+    font-family: var(--font-title);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 8px;
+    letter-spacing: -0.3px;
+}
+
+.moto-info p {
+    color: #6B7280;
+    font-size: 0.88rem;
+    margin-bottom: 20px;
+}
+
+.moto-btns {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-ficha {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px 15px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 50px;
+    color: #9CA3AF;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.btn-ficha:hover {
+    background: rgba(255,255,255,0.1);
+    color: var(--white);
+    border-color: rgba(255,255,255,0.2);
+}
+
+.btn-cotiza {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px 15px;
+    background: #25D366;
+    border: none;
+    border-radius: 50px;
+    color: var(--white);
+    font-size: 0.8rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-cotiza:hover {
+    background: #1da851;
+    transform: translateY(-2px);
+}
+
+/* CAT VIDEO */
+.cat-video-section {
+    background: #0d1220;
+    padding: 80px 5%;
+}
+
+.cat-video-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.cat-video-wrapper iframe {
+    width: 100%;
+    height: 500px;
+    border-radius: var(--radius-lg);
+    border: none;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+
+/* RESPONSIVE CATALOG */
+@media (max-width: 768px) {
+    .cat-hero { height: 45vh; }
+    .cat-hero-title { font-size: 3rem; letter-spacing: -1px; }
+    .motos-grid { grid-template-columns: 1fr; }
+    .cat-video-wrapper iframe { height: 250px; }
+}
