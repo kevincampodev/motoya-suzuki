@@ -1363,3 +1363,744 @@ nav {
     .motos-grid { grid-template-columns: 1fr; }
     .cat-video-wrapper iframe { height: 250px; }
 }
+
+/* ================================================
+   AGENDA PAGE
+   ================================================ */
+
+   .agenda-section {
+    background: #080C12;
+    padding: 80px 5%;
+    position: relative;
+    overflow: hidden;
+}
+
+.agenda-section .section-header p {
+    color: #9CA3AF;
+    margin-top: 15px;
+    line-height: 1.7;
+}
+
+.agenda-grid {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.agenda-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.agenda-form input,
+.agenda-form select,
+.agenda-form textarea {
+    width: 100%;
+    padding: 14px 18px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: var(--radius-sm);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    transition: var(--transition);
+    outline: none;
+}
+
+.agenda-form input:focus,
+.agenda-form select:focus,
+.agenda-form textarea:focus {
+    border-color: var(--primary-light);
+    background: rgba(255,255,255,0.08);
+}
+
+.agenda-form input::placeholder,
+.agenda-form textarea::placeholder {
+    color: #4B5563;
+}
+
+.agenda-form select option {
+    background: #1a1f2e;
+    color: var(--white);
+}
+
+.agenda-form textarea {
+    height: 100px;
+    resize: none;
+}
+
+.checkbox-wrap {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.checkbox-wrap input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+    margin-top: 2px;
+    accent-color: var(--primary);
+}
+
+.checkbox-wrap label {
+    font-size: 0.82rem;
+    color: #9CA3AF;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.checkbox-wrap label a {
+    color: var(--accent);
+}
+
+.btn-agendar {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, var(--primary), #1a3fd8);
+    border: none;
+    border-radius: var(--radius-sm);
+    color: var(--white);
+    font-family: var(--font-title);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+
+.btn-agendar:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-blue);
+}
+
+.agenda-map iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+
+.agenda-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.agenda-info-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: var(--radius-sm);
+    padding: 15px 18px;
+}
+
+.agenda-info-card i {
+    color: var(--primary-light);
+    font-size: 1rem;
+    margin-top: 3px;
+    min-width: 16px;
+}
+
+.agenda-info-card h4 {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.agenda-info-card p {
+    color: #9CA3AF;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.agenda-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-location {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius-sm);
+    color: #9CA3AF;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.btn-location:hover {
+    background: rgba(255,255,255,0.1);
+    color: var(--white);
+}
+
+.btn-wa {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px;
+    background: #25D366;
+    border-radius: var(--radius-sm);
+    color: var(--white);
+    font-size: 0.85rem;
+    font-weight: 700;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.btn-wa:hover {
+    background: #1da851;
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+/* BENEFICIOS */
+.beneficios-section {
+    background: #0d1220;
+    padding: 80px 5%;
+}
+
+.beneficios-grid {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.beneficio-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: var(--radius-lg);
+    padding: 35px 25px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.beneficio-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(0,61,165,0.3);
+    box-shadow: var(--shadow-blue);
+}
+
+.beneficio-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.beneficio-card h3 {
+    font-family: var(--font-title);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 12px;
+}
+
+.beneficio-card p {
+    color: #6B7280;
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 991px) {
+    .agenda-grid { grid-template-columns: 1fr; }
+    .beneficios-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+    .beneficios-grid { grid-template-columns: 1fr; }
+    .agenda-actions { flex-direction: column; }
+}
+
+/* ================================================
+   FINANCIACION PAGE
+   ================================================ */
+
+   .fin-hero {
+    min-height: 90vh;
+    background: linear-gradient(135deg, #080C12 0%, #0d1220 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 8%;
+    gap: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.fin-hero::before {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(0,61,165,0.15), transparent 70%);
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.fin-hero-content {
+    max-width: 550px;
+    position: relative;
+    z-index: 2;
+}
+
+.fin-hero-content h1 {
+    font-family: var(--font-title);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1.05;
+    margin: 15px 0 20px;
+    letter-spacing: -1px;
+}
+
+.fin-hero-content p {
+    color: #9CA3AF;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    font-size: 1rem;
+}
+
+.fin-hero-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.fin-hero-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #D1D5DB;
+    font-size: 0.95rem;
+}
+
+.fin-hero-list li i {
+    color: var(--primary-light);
+    font-size: 0.85rem;
+}
+
+.fin-hero-image {
+    flex: 1;
+    max-width: 500px;
+    position: relative;
+    z-index: 2;
+}
+
+.fin-hero-image img {
+    width: 100%;
+    filter: drop-shadow(0 30px 60px rgba(0,61,165,0.3));
+    animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* SLIDER */
+.fin-slider {
+    overflow: hidden;
+    background: #0d1220;
+    padding: 25px 0;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.fin-track {
+    display: flex;
+    align-items: center;
+    animation: slide 25s linear infinite;
+    width: max-content;
+    gap: 60px;
+}
+
+.fin-track img {
+    height: 50px;
+    max-width: 150px;
+    object-fit: contain;
+    opacity: 0.7;
+    filter: brightness(0) invert(1);
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+
+.fin-track img:hover {
+    opacity: 1;
+}
+
+@keyframes slide {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+/* SECCIONES */
+.fin-section {
+    background: #080C12;
+    padding: 80px 5%;
+}
+
+/* ENTIDADES */
+.fin-entidades {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.fin-entidad-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: var(--radius-lg);
+    padding: 30px 20px;
+    text-align: center;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.fin-entidad-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(0,61,165,0.3);
+    box-shadow: var(--shadow-blue);
+}
+
+.fin-entidad-card img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    opacity: 0.8;
+    margin: 0 auto;
+}
+
+.fin-entidad-card h3 {
+    font-family: var(--font-title);
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.fin-entidad-card a {
+    display: inline-block;
+    padding: 8px 20px;
+    background: var(--primary);
+    color: var(--white);
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    transition: var(--transition);
+}
+
+.fin-entidad-card a:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    color: var(--white);
+}
+
+/* BENEFICIOS */
+.fin-beneficios {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.fin-beneficio {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: var(--radius-lg);
+    padding: 30px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    transition: var(--transition);
+}
+
+.fin-beneficio:hover {
+    border-color: rgba(0,61,165,0.3);
+    transform: translateY(-5px);
+}
+
+.fin-beneficio i {
+    font-size: 1.8rem;
+    color: var(--primary-light);
+}
+
+.fin-beneficio span {
+    color: var(--white);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* PERFILES */
+.fin-perfiles {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.fin-perfil-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: var(--radius-lg);
+    padding: 35px 25px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.fin-perfil-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(0,61,165,0.3);
+    box-shadow: var(--shadow-blue);
+}
+
+.fin-perfil-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.fin-perfil-card h3 {
+    font-family: var(--font-title);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 10px;
+}
+
+.fin-perfil-card p {
+    color: #6B7280;
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+/* ASESORES */
+.fin-asesores {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.fin-asesor-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.fin-asesor-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(0,61,165,0.3);
+    box-shadow: var(--shadow-blue);
+}
+
+.fin-asesor-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    background: rgba(255,255,255,0.02);
+    padding: 20px;
+}
+
+.fin-asesor-info {
+    padding: 25px;
+    text-align: center;
+}
+
+.fin-asesor-info h3 {
+    font-family: var(--font-title);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 5px;
+}
+
+.fin-asesor-info p {
+    color: #6B7280;
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+}
+
+.btn-wa-asesor {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: #25D366;
+    border-radius: 50px;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.btn-wa-asesor:hover {
+    background: #1da851;
+    transform: translateY(-2px);
+    color: var(--white);
+}
+
+/* CTA */
+.fin-cta {
+    background: linear-gradient(135deg, var(--primary), #1a3fd8);
+    padding: 100px 5%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.fin-cta::before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 300px;
+    height: 300px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 50%;
+}
+
+.fin-cta-content h2 {
+    font-family: var(--font-title);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+}
+
+.fin-cta-content p {
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 35px;
+    font-size: 1.1rem;
+}
+
+/* FORMULARIO */
+.fin-form-section {
+    background: #080C12;
+    padding: 80px 5%;
+}
+
+.fin-form-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: var(--radius-xl);
+    padding: 50px;
+}
+
+.fin-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 14px;
+}
+
+.fin-form-wrapper input,
+.fin-form-wrapper select,
+.fin-form-wrapper textarea {
+    width: 100%;
+    padding: 14px 18px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: var(--radius-sm);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    transition: var(--transition);
+    outline: none;
+}
+
+.fin-form-wrapper input:focus,
+.fin-form-wrapper select:focus,
+.fin-form-wrapper textarea:focus {
+    border-color: var(--primary-light);
+    background: rgba(255,255,255,0.08);
+}
+
+.fin-form-wrapper input::placeholder,
+.fin-form-wrapper textarea::placeholder {
+    color: #4B5563;
+}
+
+.fin-form-wrapper select option {
+    background: #1a1f2e;
+    color: var(--white);
+}
+
+.fin-form-wrapper textarea {
+    height: 100px;
+    resize: none;
+    margin-bottom: 14px;
+}
+
+/* RESPONSIVE FINANCIACION */
+@media (max-width: 991px) {
+    .fin-hero { flex-direction: column; min-height: auto; padding: 80px 5%; text-align: center; }
+    .fin-hero-list { align-items: center; }
+    .fin-hero-image { max-width: 350px; }
+    .fin-entidades { grid-template-columns: repeat(2, 1fr); }
+    .fin-beneficios { grid-template-columns: repeat(2, 1fr); }
+    .fin-perfiles { grid-template-columns: repeat(2, 1fr); }
+    .fin-asesores { grid-template-columns: 1fr; max-width: 400px; }
+    .fin-form-grid { grid-template-columns: 1fr; }
+    .fin-form-wrapper { padding: 30px 20px; }
+}
+
+@media (max-width: 768px) {
+    .fin-entidades { grid-template-columns: 1fr 1fr; }
+    .fin-beneficios { grid-template-columns: 1fr 1fr; }
+    .fin-perfiles { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 480px) {
+    .fin-entidades { grid-template-columns: 1fr; }
+    .fin-beneficios { grid-template-columns: 1fr; }
+    .fin-perfiles { grid-template-columns: 1fr; }
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    display: none !important;
+}
