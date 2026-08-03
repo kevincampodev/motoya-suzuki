@@ -20,13 +20,15 @@
 
 <nav>
     <div class="logos">
-        <img src="IMG/MOTOYA.png" class="logo" alt="MotoYa" style="width:360px;height:auto;display:block;">
+        <a href="index.html">
+            <img src="IMG/MOTOYAWHITE.png" class="logo" alt="MotoYa" style="width:250px;height:auto;display:block;">
+        </a>
     </div>
     <div class="hamburger" onclick="toggleMenu()">
         <span></span><span></span><span></span>
     </div>
     <ul class="menu" id="mainMenu">
-        <li><a href="motoya.html">Inicio</a></li>
+        <li><a href="index.html">Inicio</a></li>
         <li class="dropdown">
             <a href="#">Motos ▾</a>
             <ul class="submenu">
@@ -47,8 +49,8 @@
         <li class="dropdown">
             <a href="#">Servicio Tecnico ▾</a>
             <ul class="submenu">
+                <li class="submenu-category">Postventa</li>
                 <li><a href="AGENDA.html"><i class="fa-solid fa-calendar"></i> Agendar cita</a></li>
-                <li><a href="#"><i class="fa-solid fa-wrench"></i> Repuestos/Accesorios</a></li>
             </ul>
         </li>
     </ul>
@@ -56,7 +58,7 @@
 
 <!-- HERO -->
 <section class="cat-hero">
-    <div class="cat-hero-bg" style="background-image: url('IMG/POSTVENTA-TECNICO.jpg')"></div>
+    <div class="cat-hero-bg" style="background-image: url('IMG/FACHADA.jpeg'); background-position: top center;"></div>
     <div class="cat-hero-overlay"></div>
     <div class="cat-hero-content">
         <span class="section-tag">SERVICIO TÉCNICO</span>
@@ -69,7 +71,7 @@
 <section class="stats-section">
     <div class="stats-grid">
         <div class="stat-item reveal">
-            <h3 class="stat-number">44+</h3>
+            <h3 class="stat-number">+44</h3>
             <p class="stat-label">Años de trayectoria</p>
         </div>
         <div class="stat-item reveal">
@@ -146,9 +148,10 @@
                 <input type="text" id="website" name="website" style="display:none" tabindex="-1" autocomplete="off">
 
                 <div class="checkbox-wrap">
-                    <input type="checkbox" id="tratamientoCita" required>
-                    <label for="tratamientoCita">
-                        Acepto el <a href="politica-privacidad.html" target="_blank">tratamiento de mis datos personales</a> conforme a la Ley 1581 de 2012.
+                    <input type="checkbox" id="tratamientoCita" class="checkbox-hidden" required>
+                    <label for="tratamientoCita" class="checkbox-label">
+                        <span class="checkbox-box"></span>
+                        <span class="checkbox-text">Acepto el <a href="politica-privacidad.html" target="_blank">tratamiento de mis datos personales</a> conforme a la Ley 1581 de 2012.</span>
                     </label>
                 </div>
 
@@ -235,7 +238,7 @@
         </div>
         <div class="footer-links">
             <h3>Navegación</h3>
-            <a href="motoya.html">Inicio</a>
+            <a href="index.html">Inicio</a>
             <a href="AUTOMATICAS.HTML">Motocicletas</a>
             <a href="AGENDA.html">Servicio Técnico</a>
             <a href="#">Repuestos</a>

@@ -20,13 +20,15 @@
 
 <nav>
     <div class="logos">
-        <img src="IMG/MOTOYA.png" class="logo" alt="MotoYa" style="width:360px;height:auto;display:block;">
+        <a href="index.html">
+            <img src="IMG/MOTOYAWHITE.png" class="logo" alt="MotoYa" style="width:250px;height:auto;display:block;">
+        </a>
     </div>
     <div class="hamburger" onclick="toggleMenu()">
         <span></span><span></span><span></span>
     </div>
     <ul class="menu" id="mainMenu">
-        <li><a href="motoya.html">Inicio</a></li>
+        <li><a href="index.html">Inicio</a></li>
         <li class="dropdown">
             <a href="#">Motos ▾</a>
             <ul class="submenu">
@@ -47,8 +49,8 @@
         <li class="dropdown">
             <a href="#">Servicio Tecnico ▾</a>
             <ul class="submenu">
+                <li class="submenu-category">Postventa</li>
                 <li><a href="AGENDA.html"><i class="fa-solid fa-calendar"></i> Agendar cita</a></li>
-                <li><a href="#"><i class="fa-solid fa-wrench"></i> Repuestos/Accesorios</a></li>
             </ul>
         </li>
     </ul>
@@ -56,6 +58,13 @@
 
 <!-- HERO -->
 <section class="fin-hero">
+    <span class="fin-hero-watermark">MOTOYA</span>
+    <div class="fin-hero-shine"></div>
+    <span class="fin-particle"></span>
+    <span class="fin-particle"></span>
+    <span class="fin-particle"></span>
+    <span class="fin-particle"></span>
+    <span class="fin-particle"></span>
     <div class="fin-hero-content reveal">
         <span class="section-tag">FINANCIACIÓN SUZUKI</span>
         <h1>Financia tu Moto<br>con nosotros</h1>
@@ -84,6 +93,7 @@
 
 <!-- SLIDER LOGOS -->
 <div class="fin-slider">
+    <p class="fin-slider-label">Trabajamos con las mejores entidades</p><br>
     <div class="fin-track">
         <img src="FINANCIACION/ADDI.png" alt="ADDI">
         <img src="FINANCIACION/BGOTA.png" alt="Banco de Bogota">
@@ -96,6 +106,11 @@
         <img src="FINANCIACION/ADDI.png" alt="ADDI">
         <img src="FINANCIACION/BGOTA.png" alt="Banco de Bogota">
         <img src="FINANCIACION/BRILLA.png" alt="Brilla">
+        <img src="FINANCIACION/CREDIORBE.png" alt="Crediorbe">
+        <img src="FINANCIACION/MI-PLANTE.png" alt="Mi Plante">
+        <img src="FINANCIACION/PROGRESER.png" alt="Progreser">
+        <img src="FINANCIACION/SISTECREDITO.png" alt="Sistecredito">
+        <img src="FINANCIACION/SUFI.png" alt="SUFI">
     </div>
 </div>
 
@@ -153,7 +168,7 @@
     </div>
     <div class="fin-asesores reveal">
         <div class="fin-asesor-card">
-            <img src="FINANCIACION/BRIAN.jpeg" alt="Brian">
+            <img src="FINANCIACION/BRIAN.png" alt="Brian">
             <div class="fin-asesor-info">
                 <h3>Brian</h3>
                 <p>Asesor Comercial</p>
@@ -161,7 +176,7 @@
             </div>
         </div>
         <div class="fin-asesor-card">
-            <img src="FINANCIACION/KAREN.jpeg" alt="Karen">
+            <img src="FINANCIACION/KAREN.png" alt="Karen">
             <div class="fin-asesor-info">
                 <h3>Karen</h3>
                 <p>Asesora Comercial</p>
@@ -263,11 +278,12 @@
             <input type="text" id="website" name="website" style="display:none" tabindex="-1" autocomplete="off">
 
             <div class="checkbox-wrap">
-                <input type="checkbox" id="tratamientoCredito" required>
-                <label for="tratamientoCredito">
-                    Acepto el <a href="politica-privacidad.html" target="_blank">tratamiento de mis datos personales</a> conforme a la Ley 1581 de 2012.
+                <input type="checkbox" id="tratamientoCredito" class="checkbox-hidden" required>
+                <label for="tratamientoCredito" class="checkbox-label">
+                    <span class="checkbox-box"></span>
+                    <span class="checkbox-text">Acepto el <a href="politica-privacidad.html" target="_blank">tratamiento de mis datos personales</a> conforme a la Ley 1581 de 2012.</span>
                 </label>
-            </div>
+            </div><br>
 
             <button type="submit" id="btnCredito" class="btn-agendar">Enviar Solicitud</button>
         </form>
@@ -289,7 +305,7 @@
         </div>
         <div class="footer-links">
             <h3>Navegación</h3>
-            <a href="motoya.html">Inicio</a>
+            <a href="index.html">Inicio</a>
             <a href="AUTOMATICAS.HTML">Motocicletas</a>
             <a href="AGENDA.html">Servicio Técnico</a>
             <a href="#">Repuestos</a>

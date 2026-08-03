@@ -1,0 +1,13 @@
+.fin-track img {
+    height: 50px;
+    max-width: 150px;
+    object-fit: contain;
+    opacity: 0.7;
+    filter: brightness(0) invert(1);
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+
+.fin-track img:hover {
+    opacity: 1;
+}
