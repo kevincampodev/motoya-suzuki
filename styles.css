@@ -2747,3 +2747,37 @@ nav {
     50%  { opacity: 1; transform: translateY(-40px) scale(1); }
     100% { opacity: 0; transform: translateY(-80px) scale(0.5); }
 }
+
+/* ================================================
+   FONDO EXTERIOR DEL MENÚ MÓVIL
+   ================================================ */
+
+   .menu-overlay {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    body.menu-open {
+        overflow: hidden;
+    }
+
+    .menu-overlay {
+        display: block;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.62);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition:
+            opacity 0.25s ease,
+            visibility 0.25s ease;
+        z-index: 999;
+    }
+
+    .menu-overlay.active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+}
