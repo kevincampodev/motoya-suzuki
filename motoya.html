@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MotoYa | Concesionario Suzuki en Cali</title>
+<meta name="description" content="MotoYa es el concesionario autorizado Suzuki en Cali. Encuentra motocicletas nuevas, servicio tecnico especializado, repuestos originales y financiacion.">
+<meta property="og:title" content="MotoYa | Concesionario Suzuki en Cali">
+<meta property="og:description" content="MotoYa es el concesionario autorizado Suzuki en Cali. Encuentra motocicletas nuevas, servicio tecnico especializado, repuestos originales y financiacion.">
+<meta property="og:image" content="IMG/MOTOYA.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="IMG/MOTOYAA.png">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="dark-page">
+
+<nav>
+    <div class="logos">
+        <img src="IMG/MOTOYA.png" class="logo" alt="MotoYa" style="width:360px;height:auto;display:block;">
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+    </div>
+    <ul class="menu" id="mainMenu">
+        <li><a href="motoya.html">Inicio</a></li>
+        <li class="dropdown">
+            <a href="#">Motos ▾</a>
+            <ul class="submenu">
+                <li class="submenu-category">Urbanas</li>
+                <li><a href="AUTOMATICAS.HTML"><img src="IMG/LOGOAUTOMATICAS.png" style="width:18px;height:18px;object-fit:contain;display:inline-block;vertical-align:middle;"> Automaticas</a></li>
+                <li><a href="semiautomaticas.html"><img src="IMG/LOGOAUTOMATICAS.png" style="width:18px;height:18px;object-fit:contain;display:inline-block;vertical-align:middle;"> Semiautomaticas</a></li>
+                <li class="submenu-divider"></li>
+                <li class="submenu-category">Aventura</li>
+                <li><a href="ADVENTURE.HTML"><img src="IMG/LOGOVSTROM.png" style="width:18px;height:18px;object-fit:contain;display:inline-block;vertical-align:middle;"> V-STROM</a></li>
+                <li><a href="ENDURO.HTML"><img src="IMG/LOGOENDURO.png" style="width:18px;height:18px;object-fit:contain;display:inline-block;vertical-align:middle;"> Enduro</a></li>
+                <li class="submenu-divider"></li>
+                <li class="submenu-category">Rendimiento</li>
+                <li><a href="SPORT.HTML"><img src="IMG/LOGOSPORT.png" style="width:18px;height:18px;object-fit:contain;display:inline-block;vertical-align:middle;"> Sport</a></li>
+                <li><a href="ALTOCC.HTML"><img src="IMG/LOGOALTOCC.png" style="width:18px;height:18px;object-fit:contain;display:inline-block;vertical-align:middle;"> Alto Cilindraje</a></li>
+            </ul>
+        </li>
+        <li><a href="FINANCIACION.HTML">Financiación</a></li>
+        <li class="dropdown">
+            <a href="#">Servicio Tecnico ▾</a>
+            <ul class="submenu">
+                <li><a href="AGENDA.html"><i class="fa-solid fa-calendar"></i> Agendar cita</a></li>
+                <li><a href="#"><i class="fa-solid fa-wrench"></i> Repuestos/Accesorios</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+<!-- HERO CARRUSEL -->
+<section class="hero-section">
+    <div class="hero-overlay-content">
+        <span class="hero-tag">CONCESIONARIO AUTORIZADO</span>
+        <h1 class="hero-title">Domina la calle con <span class="text-accent">Suzuki</span></h1>
+        <p class="hero-subtitle">Potencia, diseño y tecnología en cada kilómetro.</p>
+        <div class="hero-actions">
+            <a href="AUTOMATICAS.HTML" class="btn-primary">Ver Motocicletas</a>
+            <a href="AGENDA.html" class="btn-outline-light">Agendar Servicio</a>
+        </div>
+    </div>
+    <div id="carousel-home" class="carousel slide carousel-fade hero-carousel" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="IMG/VSTROM250.png" class="d-block w-100" alt="V-STROM 250">
+            </div>
+            <div class="carousel-item">
+                <img loading="lazy" src="IMG/DR160XBANNER.png" class="d-block w-100" alt="Burgman 150">
+            </div>
+            <div class="carousel-item">
+                <img loading="lazy" src="IMG/GN160.png" class="d-block w-100" alt="GN160">
+            </div>
+            <div class="carousel-item">
+                <img loading="lazy" src="IMG/GIXXER250SF.png" class="d-block w-100" alt="Viva">
+            </div>
+            <div class="carousel-item">
+                <img loading="lazy" src="IMG/GSX1000.png" class="d-block w-100" alt="V-STROM 160X">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-home" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel-home" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-section">
+    <div class="stats-grid">
+        <div class="stat-item reveal">
+            <h3 class="stat-number">44+</h3>
+            <p class="stat-label">Años de trayectoria</p>
+        </div>
+        <div class="stat-item reveal">
+            <h3 class="stat-number">+20</h3>
+            <p class="stat-label">Referencias disponibles</p>
+        </div>
+        <div class="stat-item reveal">
+            <h3 class="stat-number">100%</h3>
+            <p class="stat-label">Repuestos originales</p>
+        </div>
+        <div class="stat-item reveal">
+            <h3 class="stat-number">+9</h3>
+            <p class="stat-label">Entidades financieras</p>
+        </div>
+    </div>
+</section>
+
+<!-- POSTVENTA -->
+<section class="postventa-section">
+    <div class="section-glow"></div>
+
+    <div class="pv-hero reveal">
+        <div class="pv-content">
+            <span class="section-tag">POSTVENTA SUZUKI</span>
+            <h2>Más que mantenimiento.<br>Respaldamos cada kilómetro.</h2>
+            <p>Técnicos especializados, repuestos originales, lubricantes ECSTAR y accesorios diseñados para mantener tu Suzuki siempre lista para la aventura.</p>
+            <a href="AGENDA.html" class="btn-primary">Agenda tu servicio</a>
+        </div>
+        <div class="pv-image">
+            <img loading="lazy" src="IMG/post.PNG" alt="Postventa Suzuki">
+        </div>
+    </div>
+
+    <div class="pv-block reveal">
+        <div class="pv-block-image">
+            <img loading="lazy" src="IMG/POSTVENTA.jpg" alt="Taller Suzuki">
+        </div>
+        <div class="pv-block-content">
+            <span class="section-tag">TALLER ESPECIALIZADO</span>
+            <h3>Expertos Suzuki</h3>
+            <p>Nuestro equipo técnico cuenta con la experiencia, capacitación y herramientas necesarias para brindar diagnósticos precisos y mantenimientos de alta calidad.</p>
+        </div>
+    </div>
+
+    <div class="pv-ecstar reveal">
+        <div class="pv-ecstar-content">
+            <span class="section-tag">ECSTAR</span>
+            <h3>El rendimiento<br>comienza aquí.</h3>
+            <p>Lubricantes desarrollados específicamente para maximizar el desempeño y prolongar la vida útil de tu Suzuki.</p>
+        </div>
+        <div class="pv-ecstar-image">
+            <img loading="lazy" src="IMG/ECSTAR.jpg" alt="ECSTAR">
+        </div>
+    </div>
+
+    <div class="pv-accessories reveal">
+        <div class="section-header">
+            <span class="section-tag">ACCESORIOS ORIGINALES</span>
+            <h3>Diseñados para acompañarte<br>en cada aventura.</h3>
+        </div>
+        <div class="pv-cards">
+            <div class="pv-card">
+                <img loading="lazy" src="IMG/CASCOSSP.jpeg" alt="Cascos Premium">
+                <div class="pv-card-content">
+                    <h4>Cascos Premium</h4>
+                    <p>Protección, confort y estilo.</p>
+                </div>
+            </div>
+            <div class="pv-card">
+                <img loading="lazy" src="IMG/DEFENSAS.jpeg" alt="Equipamiento">
+                <div class="pv-card-content">
+                    <h4>Equipamiento Original</h4>
+                    <p>Calidad diseñada para cada ruta.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pv-cta reveal">
+        <h3>Tu Suzuki merece respaldo oficial.</h3>
+        <a href="AGENDA.html" class="btn-primary">Agenda tu cita</a>
+    </div>
+</section>
+
+<!-- VIDEOS -->
+<section class="videos-section reveal">
+    <div class="section-header">
+        <span class="section-tag">CONTENIDO</span>
+        <h2>Entérate de noticias<br>y nuevos lanzamientos</h2>
+    </div>
+    <div class="videos-grid">
+        <div class="video-main">
+            <iframe id="mainVideo" src="https://www.youtube.com/embed/z3o8nCbSjUQ?si=GOz5BpUPGpHH5hrw" title="YouTube video" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-thumbs">
+            <img loading="lazy" src="https://img.youtube.com/vi/uJYifSCTh9g/maxresdefault.jpg" onclick="cambiarVideo('uJYifSCTh9g')" alt="Video 1">
+            <img loading="lazy" src="https://img.youtube.com/vi/sReILrFYBS8/maxresdefault.jpg" onclick="cambiarVideo('sReILrFYBS8')" alt="Video 2">
+            <img loading="lazy" src="https://img.youtube.com/vi/wta8MbC_0qo/maxresdefault.jpg" onclick="cambiarVideo('wta8MbC_0qo')" alt="Video 3">
+        </div>
+    </div>
+</section>
+
+<!-- VISITANOS -->
+<section class="visitanos-section reveal">
+    <div class="section-header">
+        <span class="section-tag">UBICACION</span>
+        <h2>Visítanos y conócenos</h2>
+    </div>
+    <div class="visitanos-grid">
+        <div class="visitanos-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.7620207656705!2d-76.51961292526856!3d3.4081099965664503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a7fd2e48de0d%3A0x8388fd0a91d5a977!2sSuzuki!5e0!3m2!1sen!2sco!4v1780636119706!5m2!1sen!2sco" loading="lazy" allowfullscreen></iframe>
+        </div>
+        <div class="visitanos-redes">
+            <h3>Síguenos</h3>
+            <a href="https://wa.me/573016872703" class="social-link whatsapp-link">
+                <i class="fab fa-whatsapp"></i><span>@somosmotoya</span>
+            </a>
+            <a href="https://www.instagram.com/somosmotoya" class="social-link instagram-link">
+                <i class="fab fa-instagram"></i><span>@somosmotoya</span>
+            </a>
+            <a href="https://www.facebook.com/share/191LvK5sGn/" class="social-link facebook-link">
+                <i class="fab fa-facebook-f"></i><span>@somosmotoya</span>
+            </a>
+            <a href="https://www.tiktok.com/@somosmotoya" class="social-link tiktok-link">
+                <i class="fab fa-tiktok"></i><span>@somosmotoya</span>
+            </a>
+        </div>
+        <div class="visitanos-instagram">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DYK4HofPAck/?igsh=eDd2dmxsb3E4NWhp"></blockquote>
+        </div>
+    </div>
+</section>
+
+<footer class="premium-footer">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <img src="IMG/SUZUKILG.png" alt="Suzuki">
+            <h2>MOTO YA SAS</h2>
+            <p>Concesionario autorizado Suzuki. Venta de motocicletas, repuestos originales y servicio técnico especializado.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/share/191LvK5sGn/"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/somosmotoya"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/573016872703"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.tiktok.com/@somosmotoya"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+        <div class="footer-links">
+            <h3>Navegación</h3>
+            <a href="motoya.html">Inicio</a>
+            <a href="AUTOMATICAS.HTML">Motocicletas</a>
+            <a href="AGENDA.html">Servicio Técnico</a>
+            <a href="#">Repuestos</a>
+            <a href="FINANCIACION.HTML">Financiación</a>
+        </div>
+        <div class="footer-contact">
+            <h3>Contacto</h3>
+            <p>📍 Cra 46 # 38 a 28 Mariano Ramos, Cali, Valle del Cauca</p>
+            <p>📞 +57 301 687 2703</p>
+            <p>✉ lidersuzuki@motoya.co</p>
+        </div>
+        <div class="footer-hours">
+            <h3>Horarios</h3>
+            <p>Lunes - Viernes</p>
+            <span>8:30 AM - 7:00 PM</span>
+            <p>Sábados</p>
+            <span>9:00 AM - 3:30 PM</span>
+            <p>Domingos y Festivos</p>
+            <span>Cerrado</span>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 Moto Ya SAS · Todos los derechos reservados</p>
+    </div>
+</footer>
+
+<a href="https://wa.me/573016872703" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<script async src="https://www.instagram.com/embed.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+function toggleMenu() {
+    document.getElementById('mainMenu').classList.toggle('active');
+}
+
+function cambiarVideo(id) {
+    document.getElementById('mainVideo').src = 'https://www.youtube.com/embed/' + id;
+}
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav');
+    if (window.scrollY > 50) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+});
+</script>
+</body>
+</html>
